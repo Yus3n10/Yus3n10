@@ -315,7 +315,6 @@ A CNN trained with TensorFlow to recognize **1,000+ Pokémon species** from an u
   <img src="https://raw.githubusercontent.com/Yus3n10/Yus3n10/output/github-contribution-grid-snake.svg" alt="Contribution snake" width="100%" />
 </p>
 
-> ⚠️ **One-time setup:** the snake above only renders once this folder is pushed as the `Yus3n10/Yus3n10` repo *and* the included `.github/workflows/snake.yml` has run at least once (Settings → Actions → General → enable "Read and write permissions"). Until then it's a broken image, not a bug in this file.
 
 ## 💭 Dev Quote
 
