@@ -1,98 +1,90 @@
-<p align="center">
-  <a href="https://github.com/Yus3n10">
-    <img src="https://capsule-render.vercel.app/api?type=transparent&fontColor=2ea043&fontSize=54&height=90&width=858&text=Hi%2C%20I'm%20Ptheusen%20Geagoni" alt="Hi, I&#39;m Ptheusen Geagoni" />
-  </a>
-</p>
+<p align="center"> <a href="https://github.com/Yus3n10"> <img src="https://capsule-render.vercel.app/api?type=transparent&fontColor=22D3EE&fontSize=52&height=90&width=858&text=Hi%2C%20I'm%20Ptheusen%20Geagoni" alt="Hi, I'm Ptheusen Geagoni" /> </a> </p> <p align="center"> <img src="https://readme-typing-svg.demolab.com?font=JetBrains+Mono&weight=500&size=22&pause=1200&color=22D3EE&center=true&vCenter=true&width=900&height=40&lines=Software+Engineer+building+practical+AI+products;Computer+Vision+%C2%B7+Backend+%C2%B7+Data+Analytics;Fresh+Comp+Eng+grad+%E2%80%94+open+to+work" alt="Typing headlines" /> </p> <p align="center"> <img src="https://img.shields.io/badge/OPEN%20TO%20WORK-Software%20Eng%20%C2%B7%20AI%2FML%20%C2%B7%20Backend%20%C2%B7%20Data-10B981?style=for-the-badge&labelColor=0F172A" alt="Open to work" /> <img src="https://img.shields.io/badge/📍-Talisay%20City,%20Negros%20Occidental,%20PH-1E293B?style=for-the-badge&labelColor=0F172A" alt="Location" /> </p> <p align="center"> <a href="#-featured-projects">Projects</a> · <a href="#-tech-stack">Skills</a> · <a href="#-experience">Experience</a> · <a href="#-certifications">Certifications</a> · <a href="#-github-stats">Stats</a> · <a href="#-lets-connect">Connect</a> </p>
+About Me
+I recently graduated with a Bachelor's degree in Computer Engineering from the Technological University of the Philippines Visayas. I like building software that solves real problems — mostly AI systems, data tools, automation, and backend services. Most of my projects start as a way to learn a new technology and end up as something people can actually use. My own rule for a project: it should be "here's an AI that solves a problem," not "look what algorithm I made."
 
-<p align="center">
-  <img src="https://readme-typing-svg.demolab.com?font=Caveat&weight=600&size=26&pause=1000&color=2f81f7&center=true&vCenter=true&width=900&height=44&lines=Computer%20Engineer%20%7C%20Software%20Engineer%20%7C%20Full%20Stack%20%7C%20AI%20%7C%20Data" alt="Typing headlines" />
-</p>
+🔭  Currently building a full-stack platform for my local barangay — public announcements, an officials-only channel, appointments, and an admin map view. 🌱  Currently learning Spring Boot, Docker, data engineering, and cloud infrastructure. 👯  Looking to collaborate on civic tech / open-source tools for local government, and anything that puts computer vision or LLMs to practical use. 🤔  Looking for help with smart-home projects on a Raspberry Pi 5 (currently voice-controlled, working toward device control). 💬  Ask me about computer vision with YOLO, shipping Flutter + FastAPI apps end-to-end, or wiring the Gemini API into real products. 😄  Pronouns: he/him ⚡  Fun fact: a customer once swore their phone "just randomly died." I opened it up and found a dead ant that had crawled in and shorted two contacts. 🎮  Off the clock: sci-fi, deep conversations, and currently grinding Tekken 8 ranked with Devil Jin.
 
-### 🚀 About Me
+🧩 Featured Projects
+<details open> <summary><b>🤖 Jarvis</b> — a Raspberry Pi butler that talks first</summary> <br>
+A voice-driven calendar assistant on a Raspberry Pi 5 that announces upcoming appointments unprompted and repeats until acknowledged — because a reactive assistant is useless when the failure mode is forgetting. Wake-word detection, local speech-to-text, and a local-first hybrid that only calls out to Gemini for open-ended chat, never for anything that changes state.
 
-I recently graduated with a Bachelor's degree in Computer Engineering from the Technological University of the Philippines Visayas. I like building software that solves real problems, mostly around artificial intelligence, data analytics, automation, and backend development. Most of my projects start as a way to learn a new technology and turn into something people can actually use, whether that is an AI system, a data dashboard, or a business tool.  
-I am looking for entry-level roles in software engineering, AI and machine learning, backend development, or data analytics, where I can keep learning and work on things that ship.
+🎙️ Always-on "Hey Jarvis" wake word (openWakeWord) → faster-whisper STT → a pure, fully-tested intent parser
+🗣️ Piper TTS voice output, half-duplex echo gating so it doesn't hear itself talk
+💬 Optional conversational layer via the Gemini API — deterministic commands (acknowledge/snooze) always stay local; an LLM never gets to decide something that could mean a missed appointment
+✅ Read-only Google Calendar OAuth (published, non-expiring) to keep the privacy story honest
+Python Raspberry Pi Google Calendar API Gemini API openWakeWord faster-whisper Piper TTS
 
-🔭 &nbsp;I'm currently working on **A full-stack web platform for my local barangay: public announcements and events, an internal channel for officials, an appointment and notification system, and an admin map view of the barangay.**  
-🌱 &nbsp;I'm currently learning **Spring Boot and Docker, and trying to go in-depth with data engineering and cloud infrastructure.**  
-👯 &nbsp;I'm looking to collaborate on **Open-source tools for local government and civic tech, and anything that puts computer vision or LLMs to practical use.**  
-🤔 &nbsp;I'm looking for help with **brainstorming smart home projects using Raspberry pi 5**  
-💬 &nbsp;Ask me about **Computer vision with YOLO, building Flutter and FastAPI apps end to end, and putting the Gemini API into real products.**  
-😄 &nbsp;Pronouns: **he/him**  
-⚡ &nbsp;Fun fact: **I once had a customer bring in a phone that they swore had "just randomly died." After opening it up, I found a dead ant had crawled inside and shorted two contacts.**
+<a href="https://github.com/Yus3n10/Jarvis"><img src="https://img.shields.io/badge/Repo-181717?style=for-the-badge&logo=github&logoColor=white" /></a>
 
-### 🛠️ Tech Stack
+</details> <details> <summary><b>💰 Hamili</b> — AI personal finance tracker</summary> <br>
+A cross-platform finance app (Android + Web, single Flutter codebase) with a built-in assistant. People track spending, set budgets and savings goals, and ask a Gemini-powered chat assistant about their own money in plain language — every answer is grounded in their actual transactions, not generic advice.
 
-<p align="left">
-  <img src="https://img.shields.io/badge/JavaScript-F7DF1E?style=for-the-badge&logo=javascript&logoColor=black" alt="JavaScript" />
-  <img src="https://img.shields.io/badge/TypeScript-3178C6?style=for-the-badge&logo=typescript&logoColor=white" alt="TypeScript" />
-  <img src="https://img.shields.io/badge/Python-3776AB?style=for-the-badge&logo=python&logoColor=white" alt="Python" />
-  <img src="https://img.shields.io/badge/Java-ED8B00?style=for-the-badge&logo=openjdk&logoColor=white" alt="Java" />
-  <img src="https://img.shields.io/badge/C%2B%2B-00599C?style=for-the-badge&logo=cplusplus&logoColor=white" alt="C++" />
-  <img src="https://img.shields.io/badge/C-A8B9CC?style=for-the-badge&logo=c&logoColor=black" alt="C" />
-  <img src="https://img.shields.io/badge/PHP-777BB4?style=for-the-badge&logo=php&logoColor=white" alt="PHP" />
-  <img src="https://img.shields.io/badge/SQL-4479A1?style=for-the-badge&logo=mysql&logoColor=white" alt="SQL" />
-  <img src="https://img.shields.io/badge/HTML5-E34F26?style=for-the-badge&logo=html5&logoColor=white" alt="HTML5" />
-  <img src="https://img.shields.io/badge/CSS3-1572B6?style=for-the-badge&logo=css3&logoColor=white" alt="CSS3" />
-  <img src="https://img.shields.io/badge/Dart-0175C2?style=for-the-badge&logo=dart&logoColor=white" alt="Dart" />
-  <img src="https://img.shields.io/badge/React-20232A?style=for-the-badge&logo=react&logoColor=61DAFB" alt="React" />
-  <img src="https://img.shields.io/badge/Next.js-000000?style=for-the-badge&logo=nextdotjs&logoColor=white" alt="Next.js" />
-  <img src="https://img.shields.io/badge/Node.js-339933?style=for-the-badge&logo=nodedotjs&logoColor=white" alt="Node.js" />
-  <img src="https://img.shields.io/badge/FastAPI-009688?style=for-the-badge&logo=fastapi&logoColor=white" alt="FastAPI" />
-  <img src="https://img.shields.io/badge/Angular-DD0031?style=for-the-badge&logo=angular&logoColor=white" alt="Angular" />
-  <img src="https://img.shields.io/badge/Laravel-FF2D20?style=for-the-badge&logo=laravel&logoColor=white" alt="Laravel" />
-  <img src="https://img.shields.io/badge/React%20Native-20232A?style=for-the-badge&logo=react&logoColor=61DAFB" alt="React Native" />
-  <img src="https://img.shields.io/badge/Flutter-02569B?style=for-the-badge&logo=flutter&logoColor=white" alt="Flutter" />
-  <img src="https://img.shields.io/badge/Tailwind%20CSS-06B6D4?style=for-the-badge&logo=tailwindcss&logoColor=white" alt="Tailwind CSS" />
-  <img src="https://img.shields.io/badge/TensorFlow-FF6F00?style=for-the-badge&logo=tensorflow&logoColor=white" alt="TensorFlow" />
-  <img src="https://img.shields.io/badge/pandas-150458?style=for-the-badge&logo=pandas&logoColor=white" alt="pandas" />
-  <img src="https://img.shields.io/badge/NumPy-013243?style=for-the-badge&logo=numpy&logoColor=white" alt="NumPy" />
-  <img src="https://img.shields.io/badge/PyTorch-EE4C2C?style=for-the-badge&logo=pytorch&logoColor=white" alt="PyTorch" />
-  <img src="https://img.shields.io/badge/Vue.js-35495E?style=for-the-badge&logo=vuedotjs&logoColor=4FC08D" alt="Vue.js" />
-  <img src="https://img.shields.io/badge/Django-092E20?style=for-the-badge&logo=django&logoColor=white" alt="Django" />
-  <img src="https://img.shields.io/badge/PostgreSQL-4169E1?style=for-the-badge&logo=postgresql&logoColor=white" alt="PostgreSQL" />
-  <img src="https://img.shields.io/badge/MySQL-4479A1?style=for-the-badge&logo=mysql&logoColor=white" alt="MySQL" />
-  <img src="https://img.shields.io/badge/Firebase-FFCA28?style=for-the-badge&logo=firebase&logoColor=black" alt="Firebase" />
-  <img src="https://img.shields.io/badge/MongoDB-47A248?style=for-the-badge&logo=mongodb&logoColor=white" alt="MongoDB" />
-  <img src="https://img.shields.io/badge/AWS-232F3E?style=for-the-badge&logo=amazonwebservices&logoColor=white" alt="AWS" />
-  <img src="https://img.shields.io/badge/Azure-0078D4?style=for-the-badge&logo=microsoftazure&logoColor=white" alt="Azure" />
-  <img src="https://img.shields.io/badge/Google%20Cloud-4285F4?style=for-the-badge&logo=googlecloud&logoColor=white" alt="Google Cloud" />
-  <img src="https://img.shields.io/badge/Docker-2496ED?style=for-the-badge&logo=docker&logoColor=white" alt="Docker" />
-  <img src="https://img.shields.io/badge/GitHub%20Actions-2088FF?style=for-the-badge&logo=githubactions&logoColor=white" alt="GitHub Actions" />
-  <img src="https://img.shields.io/badge/Vercel-000000?style=for-the-badge&logo=vercel&logoColor=white" alt="Vercel" />
-  <img src="https://img.shields.io/badge/Netlify-00C7B7?style=for-the-badge&logo=netlify&logoColor=white" alt="Netlify" />
-  <img src="https://img.shields.io/badge/Git-F05032?style=for-the-badge&logo=git&logoColor=white" alt="Git" />
-  <img src="https://img.shields.io/badge/GitHub-181717?style=for-the-badge&logo=github&logoColor=white" alt="GitHub" />
-  <img src="https://img.shields.io/badge/VS%20Code-007ACC?style=for-the-badge&logo=vscodium&logoColor=white" alt="VS Code" />
-  <img src="https://img.shields.io/badge/Figma-F24E1E?style=for-the-badge&logo=figma&logoColor=white" alt="Figma" />
-</p>
+Full stack shipped solo: Flutter frontend, FastAPI backend, PostgreSQL via SQLAlchemy, JWT auth
+GitHub Actions pipeline builds, signs the Android release, and deploys to Firebase Hosting (web) + Render (API)
+Flutter Dart FastAPI PostgreSQL SQLAlchemy Google Gemini API Riverpod GitHub Actions
 
-### 🔗 Connect With Me
+<a href="https://ptheusengeagoni.netlify.app/projects/hamili"><img src="https://img.shields.io/badge/Case%20study-4285F4?style=for-the-badge&logo=googlechrome&logoColor=white" /></a>
 
-<p align="left">
-  <a href="https://linkedin.com/in/linkedin.com/in/ptheuseng" target="_blank" rel="noopener noreferrer"><img src="https://img.shields.io/badge/LinkedIn-0A66C2?style=for-the-badge&logo=linkedin&logoColor=white" alt="LinkedIn" /></a>
-  <a href="https://ptheusengeagoni.netlify.app" target="_blank" rel="noopener noreferrer"><img src="https://img.shields.io/badge/Portfolio-4285F4?style=for-the-badge&logo=googlechrome&logoColor=white" alt="Portfolio" /></a>
-  <a href="mailto:pgeagoni@gmail.com" target="_blank" rel="noopener noreferrer"><img src="https://img.shields.io/badge/Email-EA4335?style=for-the-badge&logo=gmail&logoColor=white" alt="Email" /></a>
-</p>
+</details> <details> <summary><b>🚓 SAVES AI</b> — automatic license plate recognition (undergrad thesis)</summary> <br>
+A YOLOv11 + OCR pipeline that reads license plates from a camera feed, validates them against a database, and keeps a searchable record — built to replace a gate logbook with something automatic. Presented to the Land Transportation Office for accuracy approval, and successfully defended as our undergraduate thesis.
 
-### 📊 GitHub Stats
+>92% plate-read accuracy (YOLOv11 + OCR) · 100% database validation accuracy
+Co-authored with Engr. Al Christian L. Kardinas, TUP Visayas
+Python YOLOv11 OCR MySQL
 
-<p align="center">
-  <img height="165" src="https://github-readme-stats-five-sigma-99.vercel.app/api?username=Yus3n10&show_icons=true&theme=tokyonight&title_color=2ea043&icon_color=2ea043&hide_border=true&bg_color=00000000&count_private=true" alt="stats" />
-  <img height="165" src="https://github-readme-stats-five-sigma-99.vercel.app/api/top-langs/?username=Yus3n10&layout=compact&theme=tokyonight&title_color=2ea043&icon_color=2ea043&hide_border=true&bg_color=00000000&langs_count=8" alt="top langs" />
-</p>
+<a href="https://ptheusengeagoni.netlify.app/projects/saves-ai"><img src="https://img.shields.io/badge/Case%20study-4285F4?style=for-the-badge&logo=googlechrome&logoColor=white" /></a>
 
-### 📈 Contribution Graph
+</details> <details> <summary><b>📊 Steam Player Engagement Analytics</b> — data dashboard with AI-generated summaries</summary> <br>
+Collects, cleans, and visualizes Steam game data in an interactive dashboard — then has the Gemini API write an executive summary of what the numbers actually say, instead of leaving a wall of charts for the reader to interpret.
 
-<p align="center">
-  <img width="100%" src="https://github-readme-activity-graph.vercel.app/graph?username=Yus3n10&bg_color=00000000&color=2ea043&line=2ea043&point=c9d1d9&area=true&hide_border=true" alt="activity graph" />
-</p>
+Python Pandas NumPy MySQL Streamlit Plotly Google Gemini API
 
-### 💭 Dev Quote
+<a href="https://ptheusengeagoni.netlify.app/projects/steam-analytics"><img src="https://img.shields.io/badge/Case%20study-4285F4?style=for-the-badge&logo=googlechrome&logoColor=white" /></a>
 
-<p align="center">
-  <img src="https://quotes-github-readme.vercel.app/api?type=horizontal&theme=tokyonight" alt="Dev quote" />
-</p>
+</details> <details> <summary><b>🎓 TUPVConnect</b> — campus communication platform</summary> <br>
+Centralizes announcements, events, student organizations, campus maps, and resources for TUP Visayas in one place, with role-based access for students, faculty, and administrators.
 
----
-<p align="center"><i>⭐️ From <a href="https://github.com/Yus3n10">Yus3n10</a></i></p>
+React Node.js MySQL REST APIs JavaScript
+
+<a href="https://ptheusengeagoni.netlify.app/projects/tupvconnect"><img src="https://img.shields.io/badge/Case%20study-4285F4?style=for-the-badge&logo=googlechrome&logoColor=white" /></a>
+
+</details> <details> <summary><b>🐾 Pokémon Image Classifier</b> — computer vision from scratch</summary> <br>
+A CNN trained with TensorFlow to recognize 1,000+ Pokémon species from an uploaded image. Built to properly learn the CV workflow end-to-end: dataset assembly, architecture design, and the unglamorous work of figuring out why the model confuses two similar-looking species.
+
+Python TensorFlow CNN
+
+<a href="https://ptheusengeagoni.netlify.app/projects/pokemon-classifier"><img src="https://img.shields.io/badge/Case%20study-4285F4?style=for-the-badge&logo=googlechrome&logoColor=white" /></a>
+
+</details> <p align="center"><i>Full write-ups, build notes, and photos for every project above live on my <a href="https://ptheusengeagoni.netlify.app">portfolio</a>.</i></p>
+🛠️ Tech Stack
+Languages
+
+<p align="left"> <img src="https://img.shields.io/badge/Python-3776AB?style=for-the-badge&logo=python&logoColor=white" /> <img src="https://img.shields.io/badge/Java-ED8B00?style=for-the-badge&logo=openjdk&logoColor=white" /> <img src="https://img.shields.io/badge/C-A8B9CC?style=for-the-badge&logo=c&logoColor=black" /> <img src="https://img.shields.io/badge/C%2B%2B-00599C?style=for-the-badge&logo=cplusplus&logoColor=white" /> <img src="https://img.shields.io/badge/JavaScript-F7DF1E?style=for-the-badge&logo=javascript&logoColor=black" /> <img src="https://img.shields.io/badge/Dart-0175C2?style=for-the-badge&logo=dart&logoColor=white" /> <img src="https://img.shields.io/badge/SQL-4479A1?style=for-the-badge&logo=databricks&logoColor=white" /> <img src="https://img.shields.io/badge/R-276DC3?style=for-the-badge&logo=r&logoColor=white" /> <img src="https://img.shields.io/badge/HTML5-E34F26?style=for-the-badge&logo=html5&logoColor=white" /> <img src="https://img.shields.io/badge/CSS3-1572B6?style=for-the-badge&logo=css3&logoColor=white" /> <img src="https://img.shields.io/badge/Ruby-CC342D?style=for-the-badge&logo=ruby&logoColor=white" /> <img src="https://img.shields.io/badge/Verilog-1E293B?style=for-the-badge" /> </p>
+Frameworks & Libraries
+
+<p align="left"> <img src="https://img.shields.io/badge/React-20232A?style=for-the-badge&logo=react&logoColor=61DAFB" /> <img src="https://img.shields.io/badge/Node.js-339933?style=for-the-badge&logo=nodedotjs&logoColor=white" /> <img src="https://img.shields.io/badge/Flutter-02569B?style=for-the-badge&logo=flutter&logoColor=white" /> <img src="https://img.shields.io/badge/FastAPI-009688?style=for-the-badge&logo=fastapi&logoColor=white" /> <img src="https://img.shields.io/badge/Electron.js-47848F?style=for-the-badge&logo=electron&logoColor=white" /> <img src="https://img.shields.io/badge/Streamlit-FF4B4B?style=for-the-badge&logo=streamlit&logoColor=white" /> </p>
+AI & Data
+
+<p align="left"> <img src="https://img.shields.io/badge/TensorFlow-FF6F00?style=for-the-badge&logo=tensorflow&logoColor=white" /> <img src="https://img.shields.io/badge/YOLO-111827?style=for-the-badge" /> <img src="https://img.shields.io/badge/Google%20Gemini%20API-8E75B2?style=for-the-badge&logo=googlegemini&logoColor=white" /> <img src="https://img.shields.io/badge/Generative%20AI-7C3AED?style=for-the-badge" /> <img src="https://img.shields.io/badge/Prompt%20Engineering-7C3AED?style=for-the-badge" /> <img src="https://img.shields.io/badge/AI%20Agents-7C3AED?style=for-the-badge" /> <img src="https://img.shields.io/badge/pandas-150458?style=for-the-badge&logo=pandas&logoColor=white" /> <img src="https://img.shields.io/badge/NumPy-013243?style=for-the-badge&logo=numpy&logoColor=white" /> <img src="https://img.shields.io/badge/Plotly-3F4F75?style=for-the-badge&logo=plotly&logoColor=white" /> <img src="https://img.shields.io/badge/Matplotlib-11557C?style=for-the-badge" /> <img src="https://img.shields.io/badge/Tableau-E97627?style=for-the-badge&logo=tableau&logoColor=white" /> <img src="https://img.shields.io/badge/Power%20BI-F2C811?style=for-the-badge&logo=powerbi&logoColor=black" /> <img src="https://img.shields.io/badge/Google%20Analytics-E37400?style=for-the-badge&logo=googleanalytics&logoColor=white" /> </p>
+Databases
+
+<p align="left"> <img src="https://img.shields.io/badge/PostgreSQL-4169E1?style=for-the-badge&logo=postgresql&logoColor=white" /> <img src="https://img.shields.io/badge/MySQL-4479A1?style=for-the-badge&logo=mysql&logoColor=white" /> <img src="https://img.shields.io/badge/Oracle-F80000?style=for-the-badge&logo=oracle&logoColor=white" /> <img src="https://img.shields.io/badge/SQLite-003B57?style=for-the-badge&logo=sqlite&logoColor=white" /> </p>
+Cloud & DevOps
+
+<p align="left"> <img src="https://img.shields.io/badge/AWS-232F3E?style=for-the-badge&logo=amazonwebservices&logoColor=white" /> <img src="https://img.shields.io/badge/Render-46E3B7?style=for-the-badge&logo=render&logoColor=black" /> <img src="https://img.shields.io/badge/Firebase%20Hosting-FFCA28?style=for-the-badge&logo=firebase&logoColor=black" /> <img src="https://img.shields.io/badge/GitHub%20Actions-2088FF?style=for-the-badge&logo=githubactions&logoColor=white" /> <img src="https://img.shields.io/badge/CI%2FCD-22D3EE?style=for-the-badge" /> <img src="https://img.shields.io/badge/REST%20APIs-22D3EE?style=for-the-badge" /> <img src="https://img.shields.io/badge/JWT%20Auth-000000?style=for-the-badge&logo=jsonwebtokens&logoColor=white" /> </p>
+Tools
+
+<p align="left"> <img src="https://img.shields.io/badge/Git-F05032?style=for-the-badge&logo=git&logoColor=white" /> <img src="https://img.shields.io/badge/GitHub-181717?style=for-the-badge&logo=github&logoColor=white" /> <img src="https://img.shields.io/badge/VS%20Code-007ACC?style=for-the-badge&logo=visualstudiocode&logoColor=white" /> <img src="https://img.shields.io/badge/Jupyter-F37626?style=for-the-badge&logo=jupyter&logoColor=white" /> </p>
+💼 Experience
+Role	Organization	Highlights
+Information Systems Intern	Land Transportation Office	Built a Python + Electron.js MIS that automated monthly revenue recording, replacing a manual process. Ran the technical side of daily operations (displays, files, seminar decks).
+Computer Hardware Technician Intern	MF Computer Solutions	Assembled and repaired desktop builds, diagnosed hardware/software issues, tracked inventory across branches, helped customers pick parts.
+Assistant City Planner Intern	City Government of Talisay	Prepared and organized GIS datasets for city and landmark mapping projects.
+📜 Certifications
+<p align="left"> <img src="https://img.shields.io/badge/AWS-Cloud%20Practitioner%20Essentials-232F3E?style=for-the-badge&logo=amazonaws&logoColor=white" /> <img src="https://img.shields.io/badge/Google-IT%20Support%20Professional-4285F4?style=for-the-badge&logo=google&logoColor=white" /> <img src="https://img.shields.io/badge/Google-Data%20Analytics%20Professional-4285F4?style=for-the-badge&logo=google&logoColor=white" /> <img src="https://img.shields.io/badge/Google-AI%20Professional-4285F4?style=for-the-badge&logo=google&logoColor=white" /> <img src="https://img.shields.io/badge/SAS-Foundations%20of%20Cloud%20Analytics-1E90FF?style=for-the-badge" /> <img src="https://img.shields.io/badge/Cisco-Hardware%20Support%20%26%20Upgrade-1BA0D7?style=for-the-badge&logo=cisco&logoColor=white" /> <img src="https://img.shields.io/badge/Cisco-Digital%20Safety%20%26%20Security-1BA0D7?style=for-the-badge&logo=cisco&logoColor=white" /> <img src="https://img.shields.io/badge/Microsoft-Power%20BI%20Data%20Analyst-F2C811?style=for-the-badge&logo=powerbi&logoColor=black" /> <img src="https://img.shields.io/badge/IBM%20%C2%B7%20Coursera-Project%20Manager%20Professional-052FAD?style=for-the-badge&logo=ibm&logoColor=white" /> <img src="https://img.shields.io/badge/TechAcademy-Agentic%20AI%20Masterclass-7C3AED?style=for-the-badge" /> <img src="https://img.shields.io/badge/IBM%20%C2%B7%20Coursera-Full%20Stack%20Dev%20(in%20progress)-334155?style=for-the-badge&logo=ibm&logoColor=white" /> </p>
+📊 GitHub Stats
+<p align="center"> <img height="165" src="https://github-readme-stats-five-sigma-99.vercel.app/api?username=Yus3n10&show_icons=true&theme=tokyonight&title_color=22D3EE&icon_color=7C3AED&text_color=F8FAFC&hide_border=true&bg_color=00000000&count_private=true" alt="stats" /> <img height="165" src="https://github-readme-stats-five-sigma-99.vercel.app/api/top-langs/?username=Yus3n10&layout=compact&theme=tokyonight&title_color=22D3EE&icon_color=7C3AED&text_color=F8FAFC&hide_border=true&bg_color=00000000&langs_count=8" alt="top langs" /> </p> <p align="center"> <img src="https://github-profile-trophy.vercel.app/?username=Yus3n10&theme=nightowl&no-frame=true&no-bg=true&margin-w=8&row=1" alt="trophies" /> </p> <p align="center"> <img width="100%" src="https://github-readme-activity-graph.vercel.app/graph?username=Yus3n10&bg_color=00000000&color=22D3EE&line=22D3EE&point=F8FAFC&area=true&hide_border=true" alt="activity graph" /> </p> <p align="center"> <img src="https://raw.githubusercontent.com/Yus3n10/Yus3n10/output/github-contribution-grid-snake.svg" alt="contribution snake" width="100%" /> </p> <p align="center"><i>Snake animation needs a workflow enabled once in this repo — see <code>.github/workflows/snake.yml</code> included alongside this file.</i></p>
+💭 Dev Quote
+<p align="center"> <img src="https://quotes-github-readme.vercel.app/api?type=horizontal&theme=discord_dark" alt="Dev quote" /> </p>
+🔗 Let's Connect
+<p align="left"> <a href="https://linkedin.com/in/ptheuseng" target="_blank" rel="noopener noreferrer"><img src="https://img.shields.io/badge/LinkedIn-0A66C2?style=for-the-badge&logo=linkedin&logoColor=white" alt="LinkedIn" /></a> <a href="https://ptheusengeagoni.netlify.app" target="_blank" rel="noopener noreferrer"><img src="https://img.shields.io/badge/Portfolio-22D3EE?style=for-the-badge&logo=googlechrome&logoColor=black" alt="Portfolio" /></a> <a href="mailto:pgeagoni@gmail.com" target="_blank" rel="noopener noreferrer"><img src="https://img.shields.io/badge/Email-EA4335?style=for-the-badge&logo=gmail&logoColor=white" alt="Email" /></a> </p> <p align="center"><i>⭐️ From <a href="https://github.com/Yus3n10">Yus3n10</a> — software engineer building practical AI products.</i></p>
