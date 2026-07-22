@@ -24,7 +24,8 @@ Dashboards, pipelines, and GIS layers that turn raw numbers into something a dec
 💬  Ask me about computer vision with YOLO, shipping Flutter + FastAPI end-to-end, or wiring the Gemini API into real products.<br>
 😄  Pronouns: he/him<br>
 ⚡  Fun fact: a customer once swore their phone "just randomly died." I opened it up and found a dead ant that had crawled in and shorted two contacts.<br>
-🎮  Off the clock: sci-fi, deep conversations, and currently ranked God of Destruction 1 in Tekken 8 with Devil Jin.
+🎮  Off the clock: sci-fi, deep conversations, and currently ranked God of Destruction 1 in Tekken 8 with Devil Jin.<br>
+
 🧩 Featured Projects
 <details open> <summary><b>🤖 &nbsp;Jarvis — a Raspberry Pi butler that talks first</b></summary> <br>
 A voice-driven calendar assistant on a Raspberry Pi 5 that announces upcoming appointments unprompted and repeats until acknowledged — because a reactive assistant is useless when the failure mode is forgetting.
