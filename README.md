@@ -101,6 +101,7 @@ A cross-platform finance app (Android + Web, single Flutter codebase) with a bui
 <img src="https://img.shields.io/badge/Flutter-02569B?style=flat-square&logo=flutter&logoColor=white" />
 <img src="https://img.shields.io/badge/FastAPI-009688?style=flat-square&logo=fastapi&logoColor=white" />
 <img src="https://img.shields.io/badge/PostgreSQL-4169E1?style=flat-square&logo=postgresql&logoColor=white" />
+<img src="https://img.shields.io/badge/Firebase-FFCA28?style=flat-square&logo=firebase&logoColor=black" />
 <img src="https://img.shields.io/badge/GitHub_Actions-2088FF?style=flat-square&logo=githubactions&logoColor=white" />
 </p>
 
@@ -188,13 +189,7 @@ A CNN trained with TensorFlow to recognize **1,000+ Pokémon species** from an u
 <summary><b>🥐 &nbsp;Creer — a small-batch home bakery's Instagram presence, rebuilt as a real website</b></summary>
 <br>
 
-Rebuilt a home bakery's Lovable prototype into a production React/TypeScript site — a data-driven content layer so the owner can add menu items without touching code, custom crossfade photo galleries built from raw phone photos, and a resilience layer that keeps animations working even inside Instagram's in-app browser, where standard scroll-trigger APIs are known to silently fail.
-
-- Architected the whole stack solo — **Vite + React + TypeScript + Tailwind v4**, shadcn/ui with every default color token remapped to the client's actual brand palette instead of shipping the default theme
-- Built a real content pipeline, not hardcoded pages — menu items, prices, and photos live in typed data files; adding a new product/flavor is a data edit, zero code changes
-- Diagnosed and engineered around a real production bug: in-app browsers (Instagram/Facebook webviews — this business's actual traffic source) don't reliably fire `IntersectionObserver` or image `load` events. Shipped a timed fallback so content and animations degrade gracefully instead of silently breaking for real users
-- Security-audited before shipping: secret scan, CSP + security headers, honeypot + input validation on the contact form, zero client-side keys
-- Full responsive QA, verified at multiple breakpoints with no horizontal overflow, plus accessibility basics (focus states, reduced-motion support, ARIA-correct interactive components)
+Commissioned by a local online bakery business to build a React/TypeScript site with data-driven content layer so the owner can add menu items without touching code, custom crossfade photo galleries built from raw phone photos, and a resilience layer that keeps animations working even inside Instagram's in-app browser, where standard scroll-trigger APIs are known to silently fail.
 
 <p>
 <img src="https://img.shields.io/badge/Vite-646CFF?style=flat-square&logo=vite&logoColor=white" />
@@ -261,6 +256,7 @@ Rebuilt a home bakery's Lovable prototype into a production React/TypeScript sit
 <img src="https://img.shields.io/badge/NumPy-013243?style=for-the-badge&logo=numpy&logoColor=white" />
 <img src="https://img.shields.io/badge/Plotly-3F4F75?style=for-the-badge&logo=plotly&logoColor=white" />
 <img src="https://img.shields.io/badge/Matplotlib-11557C?style=for-the-badge" />
+<img src="https://img.shields.io/badge/Seaborn-3776AB?style=for-the-badge" />
 <img src="https://img.shields.io/badge/Tableau-E97627?style=for-the-badge&logo=tableau&logoColor=white" />
 <img src="https://img.shields.io/badge/Power_BI-F2C811?style=for-the-badge&logo=powerbi&logoColor=black" />
 <img src="https://img.shields.io/badge/Google_Analytics-E37400?style=for-the-badge&logo=googleanalytics&logoColor=white" />
@@ -292,7 +288,7 @@ Rebuilt a home bakery's Lovable prototype into a production React/TypeScript sit
 <p align="left">
 <img src="https://img.shields.io/badge/AWS-232F3E?style=for-the-badge&logo=amazonwebservices&logoColor=white" />
 <img src="https://img.shields.io/badge/Render-46E3B7?style=for-the-badge&logo=render&logoColor=black" />
-<img src="https://img.shields.io/badge/Firebase_Hosting-FFCA28?style=for-the-badge&logo=firebase&logoColor=black" />
+<img src="https://img.shields.io/badge/Firebase-FFCA28?style=for-the-badge&logo=firebase&logoColor=black" />
 <img src="https://img.shields.io/badge/GitHub_Actions-2088FF?style=for-the-badge&logo=githubactions&logoColor=white" />
 <img src="https://img.shields.io/badge/Docker_Desktop-2496ED?style=for-the-badge&logo=docker&logoColor=white" />
 <img src="https://img.shields.io/badge/CI%2FCD-22D3EE?style=for-the-badge" />
