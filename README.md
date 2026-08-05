@@ -29,14 +29,14 @@
 
 I recently graduated with a **B.S. in Computer Engineering** from the Technological University of the Philippines Visayas. I build AI systems, data tools, automation, and backend services — most of my projects start as a way to learn a new technology and end up as something people actually use.
 
-> **7 shipped projects. 1 defended thesis at >92% real-world accuracy. 14 certifications. All built and owned solo, end to end — from the database schema to what ships in production.**
+> **8 shipped projects. 1 flagship RAG system with a measured retrieval eval harness. 1 defended thesis at >92% real-world accuracy. 13 certifications. All built and owned solo, end to end — from the database schema to what ships in production.**
 
 <table>
 <tr>
 <td width="33%" valign="top">
 
 ### 🧠 AI that ships
-Every model I train or wire up sits inside a real workflow — license-plate reads, a chat assistant grounded in your own data, an executive summary of your own numbers. Never a bare demo.
+Every model I train or wire up sits inside a real workflow — license-plate reads, a chat assistant grounded in your own data, a retrieval system with measured accuracy instead of assumed accuracy. Never a bare demo.
 
 </td>
 <td width="33%" valign="top">
@@ -54,11 +54,11 @@ Dashboards, pipelines, and GIS layers that turn raw numbers into something a dec
 </tr>
 </table>
 
-- 🔭 &nbsp;Currently building **a full-stack platform for my local barangay** — public announcements, an officials-only channel, appointments, and an admin map view.<br>
+- 🔭 &nbsp;Currently building **a grounded RAG knowledge assistant over OSHA safety regulations** — measured retrieval, citation grounding, hallucination detection, and role-based access, one Oracle Cloud deploy away from live.<br>
 - 🌱 &nbsp;Currently learning **Spring Boot, Docker, data engineering, and cloud infrastructure.**<br>
 - 👯 &nbsp;Looking to collaborate on **civic tech / open-source tools for local government**, and anything that puts computer vision or LLMs to practical use.<br>
-- 🤔 &nbsp;Looking for help with **smart-home projects on a Raspberry Pi 5** — voice control works, device control is next.<br>
-- 💬 &nbsp;Ask me about **computer vision with YOLO, shipping Flutter + FastAPI end-to-end, or wiring the Gemini API into real products.**<br>
+- 🤔 &nbsp;Drafting a plan to merge **Jarvis and Pace AI into one assistant** — computer vision for security and accessibility, wider voice commands, real voice recognition.<br>
+- 💬 &nbsp;Ask me about **computer vision with YOLO, RAG systems and how to actually measure them, or shipping Flutter + FastAPI end-to-end.**<br>
 - 😄 &nbsp;Pronouns: **he/him**<br>
 - ⚡ &nbsp;Fun fact: a customer once swore their phone **"just randomly died."** I opened it up and found a dead ant that had crawled in and shorted two contacts.<br>
 - 🎮 &nbsp;Off the clock: sci-fi, deep conversations, and currently ranked **God of Destruction 1** in Tekken 8 with Devil Jin.
@@ -68,6 +68,33 @@ Dashboards, pipelines, and GIS layers that turn raw numbers into something a dec
 ## 🧩 Featured Projects
 
 <details open>
+<summary><b>🦺 &nbsp;RAG Knowledge Assistant — grounded Q&A over OSHA safety regulations</b></summary>
+<br>
+
+A document Q&A system built like a product, not a tutorial. The differentiator is the layer most "RAG chatbot" portfolio projects skip entirely: a **measured retrieval eval harness**, citation grounding, and hallucination detection — not just a chatbot that sounds confident.
+
+- 📏 965 chunks over OSHA 29 CFR 1910, measured against a **45-question hand-verified eval set**: recall@5 **0.917**, recall@10 **0.987**, strict multi-paragraph completeness climbing to **0.833**
+- 🔍 Citations are validated against source text; the UI separates paragraphs the model **cited** from ones it retrieved-but-ignored, since the correct source is often sitting in that second list when the model misattributes a claim
+- 🚫 Numbers in an answer that don't appear in the retrieved text get flagged in a warning banner instead of hidden
+- 🔐 JWT auth with **role-based access control** — a general viewer vs. a safety-officer role with access to gated content
+- 🐳 FastAPI + React, Postgres/pgvector, containerized — **one Oracle Cloud deploy away from live**
+
+<p>
+<img src="https://img.shields.io/badge/Python-3776AB?style=flat-square&logo=python&logoColor=white" />
+<img src="https://img.shields.io/badge/FastAPI-009688?style=flat-square&logo=fastapi&logoColor=white" />
+<img src="https://img.shields.io/badge/PostgreSQL-4169E1?style=flat-square&logo=postgresql&logoColor=white" />
+<img src="https://img.shields.io/badge/pgvector-4169E1?style=flat-square" />
+<img src="https://img.shields.io/badge/React-20232A?style=flat-square&logo=react&logoColor=61DAFB" />
+<img src="https://img.shields.io/badge/TypeScript-3178C6?style=flat-square&logo=typescript&logoColor=white" />
+<img src="https://img.shields.io/badge/Docker-2496ED?style=flat-square&logo=docker&logoColor=white" />
+<img src="https://img.shields.io/badge/JWT_Auth-000000?style=flat-square&logo=jsonwebtokens&logoColor=white" />
+<img src="https://img.shields.io/badge/Oracle_Cloud_(target)-F80000?style=flat-square&logo=oracle&logoColor=white" />
+</p>
+
+<a href="https://github.com/Yus3n10/rag-knowledge-assistant"><img src="https://img.shields.io/badge/View_Repo-181717?style=for-the-badge&logo=github&logoColor=white" /></a>
+</details>
+
+<details>
 <summary><b>🤖 &nbsp;Jarvis — a Raspberry Pi butler that talks first</b></summary>
 <br>
 
@@ -89,6 +116,30 @@ A voice-driven calendar assistant on a Raspberry Pi 5 that **announces upcoming 
 </details>
 
 <details>
+<summary><b>💬 &nbsp;Pace AI — a RAG chatbot that answers for me</b></summary>
+<br>
+
+A retrieval-augmented chatbot embedded in my portfolio that answers visitor questions about my work from a single curated document — and refuses rather than guesses when the document doesn't cover it. One invented credential on my own portfolio costs more than the feature is worth.
+
+- 🌐 Runs on **Cloudflare's edge** through a native Workers AI binding — no API key anywhere in the deployed code
+- 🧠 Embeddings via **bge-base-en-v1.5**, generation via **Llama 3.1 8B**, answers grounded only in retrieved context
+- ⚡ Frequent questions have pre-written answers that cost zero inference to serve
+- 🖥️ Also ships as a local app: Ollama + FastAPI + Chroma, hand-rolled retrieval loop, no LangChain
+
+<p>
+<img src="https://img.shields.io/badge/Python-3776AB?style=flat-square&logo=python&logoColor=white" />
+<img src="https://img.shields.io/badge/React-20232A?style=flat-square&logo=react&logoColor=61DAFB" />
+<img src="https://img.shields.io/badge/TypeScript-3178C6?style=flat-square&logo=typescript&logoColor=white" />
+<img src="https://img.shields.io/badge/Cloudflare-F38020?style=flat-square&logo=cloudflare&logoColor=white" />
+<img src="https://img.shields.io/badge/Workers_AI-F38020?style=flat-square" />
+<img src="https://img.shields.io/badge/RAG-7C3AED?style=flat-square" />
+</p>
+
+<a href="https://ptheusen-portfolio.pages.dev/projects/pace-ai"><img src="https://img.shields.io/badge/Case_Study-22D3EE?style=for-the-badge&logo=googlechrome&logoColor=black" /></a>
+<a href="https://github.com/Yus3n10/Pace_AI"><img src="https://img.shields.io/badge/View_Repo-181717?style=for-the-badge&logo=github&logoColor=white" /></a>
+</details>
+
+<details>
 <summary><b>💰 &nbsp;Hamili — AI personal finance tracker</b></summary>
 <br>
 
@@ -105,7 +156,7 @@ A cross-platform finance app (Android + Web, single Flutter codebase) with a bui
 <img src="https://img.shields.io/badge/GitHub_Actions-2088FF?style=flat-square&logo=githubactions&logoColor=white" />
 </p>
 
-<a href="https://ptheusengeagoni.netlify.app/projects/hamili"><img src="https://img.shields.io/badge/Case_Study-22D3EE?style=for-the-badge&logo=googlechrome&logoColor=black" /></a>
+<a href="https://ptheusen-portfolio.pages.dev/projects/hamili"><img src="https://img.shields.io/badge/Case_Study-22D3EE?style=for-the-badge&logo=googlechrome&logoColor=black" /></a>
 <a href="https://github.com/Yus3n10/Hamili"><img src="https://img.shields.io/badge/View_Repo-181717?style=for-the-badge&logo=github&logoColor=white" /></a>
 </details>
 
@@ -129,7 +180,7 @@ A YOLOv11 + OCR pipeline that reads license plates from a camera feed, validates
 <img src="https://img.shields.io/badge/GitHub_Actions-2088FF?style=flat-square&logo=githubactions&logoColor=white" />
 </p>
 
-<a href="https://ptheusengeagoni.netlify.app/projects/saves-ai"><img src="https://img.shields.io/badge/Case_Study-22D3EE?style=for-the-badge&logo=googlechrome&logoColor=black" /></a>
+<a href="https://ptheusen-portfolio.pages.dev/projects/saves-ai"><img src="https://img.shields.io/badge/Case_Study-22D3EE?style=for-the-badge&logo=googlechrome&logoColor=black" /></a>
 <a href="https://github.com/Yus3n10/SAVES-AI"><img src="https://img.shields.io/badge/View_Repo-181717?style=for-the-badge&logo=github&logoColor=white" /></a>
 </details>
 
@@ -147,7 +198,7 @@ Collects, cleans, and visualizes Steam game data in an interactive dashboard, th
 <img src="https://img.shields.io/badge/Steam_API-000000?style=flat-square&logo=steam&logoColor=white" />
 </p>
 
-<a href="https://ptheusengeagoni.netlify.app/projects/steam-analytics"><img src="https://img.shields.io/badge/Case_Study-22D3EE?style=for-the-badge&logo=googlechrome&logoColor=black" /></a>
+<a href="https://ptheusen-portfolio.pages.dev/projects/steam-analytics"><img src="https://img.shields.io/badge/Case_Study-22D3EE?style=for-the-badge&logo=googlechrome&logoColor=black" /></a>
 <a href="https://github.com/Yus3n10/Steam_Analytics"><img src="https://img.shields.io/badge/View_Repo-181717?style=for-the-badge&logo=github&logoColor=white" /></a>
 </details>
 
@@ -165,24 +216,32 @@ Centralizes announcements, events, student organizations, campus maps, and resou
 <img src="https://img.shields.io/badge/MySQL-4479A1?style=flat-square&logo=mysql&logoColor=white" />
 </p>
 
-<a href="https://ptheusengeagoni.netlify.app/projects/tupvconnect"><img src="https://img.shields.io/badge/Case_Study-22D3EE?style=for-the-badge&logo=googlechrome&logoColor=black" /></a>
+<a href="https://ptheusen-portfolio.pages.dev/projects/tupvconnect"><img src="https://img.shields.io/badge/Case_Study-22D3EE?style=for-the-badge&logo=googlechrome&logoColor=black" /></a>
+<a href="https://github.com/Yus3n10/tupvconnect"><img src="https://img.shields.io/badge/View_Repo-181717?style=for-the-badge&logo=github&logoColor=white" /></a>
 </details>
 
 <details>
-<summary><b>🐾 &nbsp;Pokémon Image Classifier — computer vision from scratch</b></summary>
+<summary><b>🐾 &nbsp;Pokémon Image Classifier — 1,009 classes, and the sense to say no</b></summary>
 <br>
 
-A CNN trained with TensorFlow to recognize **1,000+ Pokémon species** from an uploaded image — built to properly learn the CV workflow: dataset assembly, architecture design, and the unglamorous work of figuring out *why* the model confuses two similar-looking species.
+A computer vision model that recognizes over 1,000 Pokémon species from an uploaded image, built to learn the full CV workflow rather than a ten-class tutorial version of it — and to know when an image isn't a Pokémon at all.
+
+- 🎯 **94.8%** top-1 accuracy, **97.3%** top-5, across 1,009 classes
+- 🚫 A dedicated rejection class catches non-Pokémon images with **97.6%** recall instead of confidently guessing
+- 🌐 Quantized to ~7 MB and runs **entirely client-side in the browser**, no server involved — try it live
 
 <p>
 <img src="https://img.shields.io/badge/Python-3776AB?style=flat-square&logo=python&logoColor=white" />
-<img src="https://img.shields.io/badge/TensorFlow-FF6F00?style=flat-square&logo=tensorflow&logoColor=white" />
-<img src="https://img.shields.io/badge/CNN-111827?style=flat-square" />
+<img src="https://img.shields.io/badge/Keras_3-D00000?style=flat-square&logo=keras&logoColor=white" />
+<img src="https://img.shields.io/badge/PyTorch-EE4C2C?style=flat-square&logo=pytorch&logoColor=white" />
+<img src="https://img.shields.io/badge/EfficientNetV2-111827?style=flat-square" />
+<img src="https://img.shields.io/badge/ONNX_Runtime_Web-005CED?style=flat-square&logo=onnx&logoColor=white" />
 <img src="https://img.shields.io/badge/Jupyter-F37626?style=flat-square&logo=jupyter&logoColor=white" />
 <img src="https://img.shields.io/badge/Kaggle-20BEFF?style=flat-square&logo=kaggle&logoColor=white" />
 </p>
 
-<a href="https://ptheusengeagoni.netlify.app/projects/pokemon-classifier"><img src="https://img.shields.io/badge/Case_Study-22D3EE?style=for-the-badge&logo=googlechrome&logoColor=black" /></a>
+<a href="https://ptheusen-portfolio.pages.dev/projects/pokemon-classifier"><img src="https://img.shields.io/badge/Try_It_Live-22D3EE?style=for-the-badge&logo=googlechrome&logoColor=black" /></a>
+<a href="https://github.com/Yus3n10/pokemon_image_classifier"><img src="https://img.shields.io/badge/View_Repo-181717?style=for-the-badge&logo=github&logoColor=white" /></a>
 </details>
 
 <details>
@@ -202,7 +261,7 @@ Commissioned by a local online bakery business to build a React/TypeScript site 
 <a href="https://github.com/Yus3n10/CreerWeb"><img src="https://img.shields.io/badge/View_Repo-181717?style=for-the-badge&logo=github&logoColor=white" /></a>
 </details>
 
-<p align="center"><i>Full write-ups, build notes, and photos for every project above live on my <a href="https://ptheusengeagoni.netlify.app"><b>portfolio</b></a>.</i></p>
+<p align="center"><i>Full write-ups, build notes, and photos for every project above live on my <a href="https://ptheusen-portfolio.pages.dev"><b>portfolio</b></a>.</i></p>
 
 ---
 
@@ -272,6 +331,11 @@ Commissioned by a local online bakery business to build a React/TypeScript site 
 <img src="https://img.shields.io/badge/LangChain-1C3C3C?style=for-the-badge&logo=langchain&logoColor=white" />
 <img src="https://img.shields.io/badge/LangGraph-1C3C3C?style=for-the-badge" />
 <img src="https://img.shields.io/badge/RAG-7C3AED?style=for-the-badge" />
+<img src="https://img.shields.io/badge/pgvector-4169E1?style=for-the-badge" />
+<img src="https://img.shields.io/badge/Ollama-000000?style=for-the-badge" />
+<img src="https://img.shields.io/badge/Keras_3-D00000?style=for-the-badge&logo=keras&logoColor=white" />
+<img src="https://img.shields.io/badge/PyTorch-EE4C2C?style=for-the-badge&logo=pytorch&logoColor=white" />
+<img src="https://img.shields.io/badge/ONNX_Runtime-005CED?style=for-the-badge&logo=onnx&logoColor=white" />
 </p>
 
 **Databases**
@@ -294,6 +358,8 @@ Commissioned by a local online bakery business to build a React/TypeScript site 
 <img src="https://img.shields.io/badge/CI%2FCD-22D3EE?style=for-the-badge" />
 <img src="https://img.shields.io/badge/REST_APIs-22D3EE?style=for-the-badge" />
 <img src="https://img.shields.io/badge/JWT_Auth-000000?style=for-the-badge&logo=jsonwebtokens&logoColor=white" />
+<img src="https://img.shields.io/badge/Cloudflare_Pages-F38020?style=for-the-badge&logo=cloudflare&logoColor=white" />
+<img src="https://img.shields.io/badge/Workers_AI-F38020?style=for-the-badge" />
 </p>
 
 **Tools**
@@ -377,7 +443,6 @@ Commissioned by a local online bakery business to build a React/TypeScript site 
 <img src="https://img.shields.io/badge/Cisco-Digital_Safety_%26_Security-1BA0D7?style=for-the-badge&logo=cisco&logoColor=white" />
 <img src="https://img.shields.io/badge/Microsoft-Power_BI_Data_Analyst-F2C811?style=for-the-badge&logo=powerbi&logoColor=black" />
 <img src="https://img.shields.io/badge/IBM_%C2%B7_Coursera-Project_Manager_Professional-052FAD?style=for-the-badge&logo=ibm&logoColor=white" />
-<img src="https://img.shields.io/badge/TechAcademy-Agentic_AI_Masterclass-7C3AED?style=for-the-badge" />
 <img src="https://img.shields.io/badge/IBM_%C2%B7_Coursera-RAG_and_Agentic_AI_Professional-052FAD?style=for-the-badge&logo=ibm&logoColor=white" />
 <img src="https://img.shields.io/badge/Google-UX_Design_Professional-4285F4?style=for-the-badge&logo=google&logoColor=white" />
 <img src="https://img.shields.io/badge/Google-Generative_AI_for_UI%2FUX_Design-4285F4?style=for-the-badge&logo=google&logoColor=white" />
@@ -424,7 +489,7 @@ Commissioned by a local online bakery business to build a React/TypeScript site 
 
 <p align="left">
   <a href="https://linkedin.com/in/ptheuseng" target="_blank" rel="noopener noreferrer"><img src="https://img.shields.io/badge/LinkedIn-0A66C2?style=for-the-badge&logo=linkedin&logoColor=white" alt="LinkedIn" /></a>
-  <a href="https://ptheusengeagoni.netlify.app" target="_blank" rel="noopener noreferrer"><img src="https://img.shields.io/badge/Portfolio-22D3EE?style=for-the-badge&logo=googlechrome&logoColor=black" alt="Portfolio" /></a>
+  <a href="https://ptheusen-portfolio.pages.dev" target="_blank" rel="noopener noreferrer"><img src="https://img.shields.io/badge/Portfolio-22D3EE?style=for-the-badge&logo=googlechrome&logoColor=black" alt="Portfolio" /></a>
   <a href="mailto:pgeagoni@gmail.com" target="_blank" rel="noopener noreferrer"><img src="https://img.shields.io/badge/Email-EA4335?style=for-the-badge&logo=gmail&logoColor=white" alt="Email" /></a>
 </p>
 
