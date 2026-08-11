@@ -54,7 +54,7 @@ Dashboards, pipelines, and GIS layers that turn raw numbers into something a dec
 </tr>
 </table>
 
-- 🔭 &nbsp;Currently building **a grounded RAG knowledge assistant over OSHA safety regulations** — measured retrieval, citation grounding, hallucination detection, and role-based access, one Oracle Cloud deploy away from live.<br>
+- 🔭 &nbsp;Just shipped **a grounded RAG knowledge assistant over OSHA safety regulations** — measured retrieval, citation grounding, hallucination detection, and role-based access. [**Live here**](https://rag-knowledge-assistant-z3hw.onrender.com/).<br>
 - 🌱 &nbsp;Currently learning **Spring Boot, Docker, data engineering, and cloud infrastructure.**<br>
 - 👯 &nbsp;Looking to collaborate on **civic tech / open-source tools for local government**, and anything that puts computer vision or LLMs to practical use.<br>
 - 🤔 &nbsp;Drafting a plan to merge **Jarvis and Pace AI into one assistant** — computer vision for security and accessibility, wider voice commands, real voice recognition.<br>
@@ -73,25 +73,32 @@ Dashboards, pipelines, and GIS layers that turn raw numbers into something a dec
 
 A document Q&A system built like a product, not a tutorial. The differentiator is the layer most "RAG chatbot" portfolio projects skip entirely: a **measured retrieval eval harness**, citation grounding, and hallucination detection — not just a chatbot that sounds confident.
 
-- 📏 965 chunks over OSHA 29 CFR 1910, measured against a **45-question hand-verified eval set**: recall@5 **0.917**, recall@10 **0.987**, strict multi-paragraph completeness climbing to **0.833**
-- 🔍 Citations are validated against source text; the UI separates paragraphs the model **cited** from ones it retrieved-but-ignored, since the correct source is often sitting in that second list when the model misattributes a claim
-- 🚫 Numbers in an answer that don't appear in the retrieved text get flagged in a warning banner instead of hidden
-- 🔐 JWT auth with **role-based access control** — a general viewer vs. a safety-officer role with access to gated content
-- 🐳 FastAPI + React, Postgres/pgvector, containerized — **one Oracle Cloud deploy away from live**
+- 📏 965 chunks over OSHA 29 CFR 1910, measured against a **45-question hand-verified eval set** — every citation machine-checked against the source text
+- ✅ **60 of 60 citations resolved to a real paragraph. Zero fabricated.** Gold-citation rate 37/38, ungrounded numbers 0, and 7/7 out-of-scope questions declined instead of guessed at
+- 🔍 The UI separates paragraphs the model **cited** from ones it retrieved-but-ignored, since the correct source is often sitting in that second list when the model misattributes a claim
+- 🗺️ A **corpus map** renders all 937 indexed paragraphs as cells and lights the ten a question retrieved — the search step made visible rather than asserted
+- 🔐 JWT auth with **role-based access control** enforced in the retrieval SQL, so a viewer is refused gated content even calling the API directly, not just in the UI
+- 📊 Measured on **two embedding backends** — local `nomic-embed-text` and hosted `bge-base-en-v1.5` — and the deltas are published rather than hidden
 
 <p>
 <img src="https://img.shields.io/badge/Python-3776AB?style=flat-square&logo=python&logoColor=white" />
 <img src="https://img.shields.io/badge/FastAPI-009688?style=flat-square&logo=fastapi&logoColor=white" />
 <img src="https://img.shields.io/badge/PostgreSQL-4169E1?style=flat-square&logo=postgresql&logoColor=white" />
 <img src="https://img.shields.io/badge/pgvector-4169E1?style=flat-square" />
+<img src="https://img.shields.io/badge/Neon-00E599?style=flat-square&logo=neon&logoColor=black" />
 <img src="https://img.shields.io/badge/React-20232A?style=flat-square&logo=react&logoColor=61DAFB" />
 <img src="https://img.shields.io/badge/TypeScript-3178C6?style=flat-square&logo=typescript&logoColor=white" />
+<img src="https://img.shields.io/badge/Cloudflare_Workers_AI-F38020?style=flat-square&logo=cloudflare&logoColor=white" />
+<img src="https://img.shields.io/badge/Groq-F55036?style=flat-square&logo=groq&logoColor=white" />
 <img src="https://img.shields.io/badge/Docker-2496ED?style=flat-square&logo=docker&logoColor=white" />
 <img src="https://img.shields.io/badge/JWT_Auth-000000?style=flat-square&logo=jsonwebtokens&logoColor=white" />
-<img src="https://img.shields.io/badge/Oracle_Cloud_(target)-F80000?style=flat-square&logo=oracle&logoColor=white" />
+<img src="https://img.shields.io/badge/Render-46E3B7?style=flat-square&logo=render&logoColor=black" />
 </p>
 
+<a href="https://rag-knowledge-assistant-z3hw.onrender.com/"><img src="https://img.shields.io/badge/Live_Demo-22D3EE?style=for-the-badge&logo=googlechrome&logoColor=black" /></a>
 <a href="https://github.com/Yus3n10/rag-knowledge-assistant"><img src="https://img.shields.io/badge/View_Repo-181717?style=for-the-badge&logo=github&logoColor=white" /></a>
+
+<sub>Demo sign-in: `viewer` / `viewer-pass` (general) or `officer` / `officer-pass` (safety officer). Ask both *"Who may remove a lockout device?"* to see the access gate. Free-tier hosting sleeps when idle, so a first request can take about a minute.</sub>
 </details>
 
 <details>
