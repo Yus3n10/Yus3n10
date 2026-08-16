@@ -29,7 +29,7 @@
 
 I recently graduated with a **B.S. in Computer Engineering** from the Technological University of the Philippines Visayas. I build AI systems, data tools, automation, and backend services — most of my projects start as a way to learn a new technology and end up as something people actually use.
 
-> **8 shipped projects. 1 flagship RAG system with a measured retrieval eval harness. 1 defended thesis at >92% real-world accuracy. 13 certifications. All built and owned solo, end to end — from the database schema to what ships in production.**
+> **9 shipped projects. 1 flagship RAG system with a measured retrieval eval harness. 1 provisioning orchestrator that rolls back its own failures. 1 defended thesis at >92% real-world accuracy. 13 certifications. All built and owned solo, end to end — from the database schema to what ships in production.**
 
 <table>
 <tr>
@@ -54,8 +54,9 @@ Dashboards, pipelines, and GIS layers that turn raw numbers into something a dec
 </tr>
 </table>
 
-- 🔭 &nbsp;Just shipped **a grounded RAG knowledge assistant over OSHA safety regulations** — measured retrieval, citation grounding, hallucination detection, and role-based access. [**Live here**](https://rag-knowledge-assistant-z3hw.onrender.com/).<br>
-- 🌱 &nbsp;Currently learning **Spring Boot, Docker, data engineering, and cloud infrastructure.**<br>
+- 🔭 &nbsp;Just shipped **JML Orchestrator** — an employee provisioning system in n8n and PostgreSQL that verifies every write by reading it back, and undoes its own half-finished work in reverse order when a step fails.<br>
+- 🦺 &nbsp;Also live: **a grounded RAG knowledge assistant over OSHA safety regulations** — measured retrieval, citation grounding, hallucination detection, and role-based access. [**Try it here**](https://rag-knowledge-assistant-z3hw.onrender.com/).<br>
+- 🌱 &nbsp;Currently learning **Spring Boot, Docker, data engineering, and cloud infrastructure**, plus building an end-to-end content automation pipeline.<br>
 - 👯 &nbsp;Looking to collaborate on **civic tech / open-source tools for local government**, and anything that puts computer vision or LLMs to practical use.<br>
 - 🤔 &nbsp;Drafting a plan to merge **Jarvis and Pace AI into one assistant** — computer vision for security and accessibility, wider voice commands, real voice recognition.<br>
 - 💬 &nbsp;Ask me about **computer vision with YOLO, RAG systems and how to actually measure them, or shipping Flutter + FastAPI end-to-end.**<br>
@@ -89,7 +90,7 @@ A document Q&A system built like a product, not a tutorial. The differentiator i
 <img src="https://img.shields.io/badge/React-20232A?style=flat-square&logo=react&logoColor=61DAFB" />
 <img src="https://img.shields.io/badge/TypeScript-3178C6?style=flat-square&logo=typescript&logoColor=white" />
 <img src="https://img.shields.io/badge/Cloudflare_Workers_AI-F38020?style=flat-square&logo=cloudflare&logoColor=white" />
-<img src="https://img.shields.io/badge/Groq-F55036?style=flat-square&logo=groq&logoColor=white" />
+<img src="https://img.shields.io/badge/Groq-F55036?style=flat-square" />
 <img src="https://img.shields.io/badge/Docker-2496ED?style=flat-square&logo=docker&logoColor=white" />
 <img src="https://img.shields.io/badge/JWT_Auth-000000?style=flat-square&logo=jsonwebtokens&logoColor=white" />
 <img src="https://img.shields.io/badge/Render-46E3B7?style=flat-square&logo=render&logoColor=black" />
@@ -99,6 +100,39 @@ A document Q&A system built like a product, not a tutorial. The differentiator i
 <a href="https://github.com/Yus3n10/rag-knowledge-assistant"><img src="https://img.shields.io/badge/View_Repo-181717?style=for-the-badge&logo=github&logoColor=white" /></a>
 
 <sub>Demo sign-in: `viewer` / `viewer-pass` (general) or `officer` / `officer-pass` (safety officer). Ask both *"Who may remove a lockout device?"* to see the access gate. Free-tier hosting sleeps when idle, so a first request can take about a minute.</sub>
+</details>
+
+<details>
+<summary><b>🔁 &nbsp;JML Orchestrator — employee provisioning that undoes its own half-finished work</b></summary>
+<br>
+
+An employee onboarding/offboarding provisioning system built as **nine n8n workflows over PostgreSQL**. A request becomes an ordered plan derived from a policy table, privileged grants pause for human approval, and every step executes idempotently and is verified by reading the target system back. The hard part was never calling the APIs — it's that APIs fail halfway, and a half-provisioned account is worse than none because nobody knows it exists.
+
+<img src="https://raw.githubusercontent.com/Yus3n10/Self-Healing-Employee-Lifecycle-Automation-n8n-workflow-/main/docs/assets/lifecycle-flow.svg" alt="Animated diagram of the three paths a provisioning request can take: a routine onboarding that completes unattended, a privileged onboarding that pauses for human approval, and a failing run that is compensated in reverse order." width="100%" />
+
+- 🔄 **Compensating-transaction saga** — a failed run walks its own ledger backwards and undoes what already succeeded, in reverse order. Verified by injecting a fault into the identity API, not by reading the code
+- 🔑 **Idempotency at two layers** — deterministic per-step `Idempotency-Key` headers plus a UNIQUE-constrained request ledger, making duplicate submissions *impossible* rather than unlikely
+- 🔬 **Read-back verification** — a 2xx is treated as a claim, not evidence. Every write is followed by a GET that asserts the intended effect. This caught a real case where the API reported success and nothing had changed
+- ⏸️ **Human-in-the-loop approval** that is single-use and expires in 24 hours, on a durable Wait node with the decision persisted to the database — nothing is provisioned while it waits
+- 🧨 **Verified by fault injection across eight failure scenarios**, including killing the provider *mid-rollback* to prove the system distinguishes `rolled_back` from `failed` and escalates only the second
+- 🤖 **One tightly fenced LLM** drafts requests from free-text HR email using an enum-constrained schema and evidence grounding — it produces a pre-filled form a human submits, and has no authority over anything that gets provisioned. Stripping its "quote the source" rule made it reject all seven extracted fields, which is the test most LLM-validation code never gets
+
+<p>
+<img src="https://img.shields.io/badge/n8n-EA4B71?style=flat-square&logo=n8n&logoColor=white" />
+<img src="https://img.shields.io/badge/PostgreSQL-4169E1?style=flat-square&logo=postgresql&logoColor=white" />
+<img src="https://img.shields.io/badge/Neon-00E599?style=flat-square&logo=neon&logoColor=black" />
+<img src="https://img.shields.io/badge/JavaScript-F7DF1E?style=flat-square&logo=javascript&logoColor=black" />
+<img src="https://img.shields.io/badge/FastAPI-009688?style=flat-square&logo=fastapi&logoColor=white" />
+<img src="https://img.shields.io/badge/Pydantic-E92063?style=flat-square&logo=pydantic&logoColor=white" />
+<img src="https://img.shields.io/badge/Gemini_API-8E75B2?style=flat-square&logo=googlegemini&logoColor=white" />
+<img src="https://img.shields.io/badge/Webhooks-22D3EE?style=flat-square" />
+<img src="https://img.shields.io/badge/SMTP-334155?style=flat-square" />
+<img src="https://img.shields.io/badge/PowerShell-5391FE?style=flat-square" />
+</p>
+
+<a href="https://github.com/Yus3n10/Self-Healing-Employee-Lifecycle-Automation-n8n-workflow-"><img src="https://img.shields.io/badge/View_Repo-181717?style=for-the-badge&logo=github&logoColor=white" /></a>
+
+<sub>A working demonstration, not a deployment. The identity provider is a simulator included in the repo, all employee data is synthetic, and it has never run in a company. What is real is the behaviour under failure.</sub>
 </details>
 
 <details>
@@ -205,7 +239,8 @@ Collects, cleans, and visualizes Steam game data in an interactive dashboard, th
 <img src="https://img.shields.io/badge/Steam_API-000000?style=flat-square&logo=steam&logoColor=white" />
 </p>
 
-<a href="https://ptheusen-portfolio.pages.dev/projects/steam-analytics"><img src="https://img.shields.io/badge/Case_Study-22D3EE?style=for-the-badge&logo=googlechrome&logoColor=black" /></a>
+<a href="https://steamgamesanalytics.streamlit.app"><img src="https://img.shields.io/badge/Live_Demo-22D3EE?style=for-the-badge&logo=googlechrome&logoColor=black" /></a>
+<a href="https://ptheusen-portfolio.pages.dev/projects/steam-analytics"><img src="https://img.shields.io/badge/Case_Study-181717?style=for-the-badge&logo=googlechrome&logoColor=white" /></a>
 <a href="https://github.com/Yus3n10/Steam_Analytics"><img src="https://img.shields.io/badge/View_Repo-181717?style=for-the-badge&logo=github&logoColor=white" /></a>
 </details>
 
@@ -213,17 +248,23 @@ Collects, cleans, and visualizes Steam game data in an interactive dashboard, th
 <summary><b>🎓 &nbsp;TUPVConnect — campus communication platform</b></summary>
 <br>
 
-Centralizes announcements, events, student organizations, campus maps, and resources for TUP Visayas in one place, with role-based access for students, faculty, and administrators.
+Centralizes announcements, events, student organizations, academic resources, a marketplace, lost-and-found, and messaging for TUP Visayas in one place, with a different view and permission set for students, faculty, and administrators.
+
+- 🔌 Built against an **existing production MySQL backend I wasn't allowed to redesign** — the frontend types mirror the live schema and every data call routes through a single file, so going live is a one-file change
+- 🎨 The design system is drawn from the campus logo itself, down to the printed-circuit traces used as an ambient background
 
 <p>
-<img src="https://img.shields.io/badge/React-20232A?style=flat-square&logo=react&logoColor=61DAFB" />
-<img src="https://img.shields.io/badge/Node.js-339933?style=flat-square&logo=nodedotjs&logoColor=white" />
-<img src="https://img.shields.io/badge/Laravel-FF2D20?style=flat-square&logo=laravel&logoColor=white" />
-<img src="https://img.shields.io/badge/PHP-777BB4?style=flat-square&logo=php&logoColor=white" />
+<img src="https://img.shields.io/badge/React_19-20232A?style=flat-square&logo=react&logoColor=61DAFB" />
+<img src="https://img.shields.io/badge/TypeScript-3178C6?style=flat-square&logo=typescript&logoColor=white" />
+<img src="https://img.shields.io/badge/Vite-646CFF?style=flat-square&logo=vite&logoColor=white" />
+<img src="https://img.shields.io/badge/Tailwind_CSS-06B6D4?style=flat-square&logo=tailwindcss&logoColor=white" />
+<img src="https://img.shields.io/badge/Motion-FFF200?style=flat-square&logo=framer&logoColor=black" />
 <img src="https://img.shields.io/badge/MySQL-4479A1?style=flat-square&logo=mysql&logoColor=white" />
+<img src="https://img.shields.io/badge/Cloudflare_Pages-F38020?style=flat-square&logo=cloudflare&logoColor=white" />
 </p>
 
-<a href="https://ptheusen-portfolio.pages.dev/projects/tupvconnect"><img src="https://img.shields.io/badge/Case_Study-22D3EE?style=for-the-badge&logo=googlechrome&logoColor=black" /></a>
+<a href="https://tupvconnect.pages.dev"><img src="https://img.shields.io/badge/Live_Demo-22D3EE?style=for-the-badge&logo=googlechrome&logoColor=black" /></a>
+<a href="https://ptheusen-portfolio.pages.dev/projects/tupvconnect"><img src="https://img.shields.io/badge/Case_Study-181717?style=for-the-badge&logo=googlechrome&logoColor=white" /></a>
 <a href="https://github.com/Yus3n10/tupvconnect"><img src="https://img.shields.io/badge/View_Repo-181717?style=for-the-badge&logo=github&logoColor=white" /></a>
 </details>
 
@@ -307,6 +348,25 @@ Commissioned by a local online bakery business to build a React/TypeScript site 
 <img src="https://img.shields.io/badge/Vite-646CFF?style=for-the-badge&logo=vite&logoColor=white" />
 <img src="https://img.shields.io/badge/Tailwind_CSS-06B6D4?style=for-the-badge&logo=tailwindcss&logoColor=white" />
 <img src="https://img.shields.io/badge/shadcn%2Fui-000000?style=for-the-badge" />
+<img src="https://img.shields.io/badge/Motion-FFF200?style=for-the-badge&logo=framer&logoColor=black" />
+<img src="https://img.shields.io/badge/Pydantic-E92063?style=for-the-badge&logo=pydantic&logoColor=white" />
+<img src="https://img.shields.io/badge/Uvicorn-499848?style=for-the-badge&logo=gunicorn&logoColor=white" />
+</p>
+
+**Automation & Orchestration**
+
+<p align="left">
+<img src="https://img.shields.io/badge/n8n-EA4B71?style=for-the-badge&logo=n8n&logoColor=white" />
+<img src="https://img.shields.io/badge/Workflow_Automation-EA4B71?style=for-the-badge" />
+<img src="https://img.shields.io/badge/Webhooks-22D3EE?style=for-the-badge" />
+<img src="https://img.shields.io/badge/Event--Driven_Design-7C3AED?style=for-the-badge" />
+<img src="https://img.shields.io/badge/Idempotency-334155?style=for-the-badge" />
+<img src="https://img.shields.io/badge/Saga_%2F_Compensating_Transactions-334155?style=for-the-badge" />
+<img src="https://img.shields.io/badge/Retry_%26_Backoff-334155?style=for-the-badge" />
+<img src="https://img.shields.io/badge/Human--in--the--Loop-FDCB6E?style=for-the-badge&labelColor=334155" />
+<img src="https://img.shields.io/badge/Audit_Logging-334155?style=for-the-badge" />
+<img src="https://img.shields.io/badge/Fault_Injection-F97583?style=for-the-badge&labelColor=334155" />
+<img src="https://img.shields.io/badge/SMTP-334155?style=for-the-badge" />
 </p>
 
 **AI & Data**
@@ -343,6 +403,9 @@ Commissioned by a local online bakery business to build a React/TypeScript site 
 <img src="https://img.shields.io/badge/Keras_3-D00000?style=for-the-badge&logo=keras&logoColor=white" />
 <img src="https://img.shields.io/badge/PyTorch-EE4C2C?style=for-the-badge&logo=pytorch&logoColor=white" />
 <img src="https://img.shields.io/badge/ONNX_Runtime-005CED?style=for-the-badge&logo=onnx&logoColor=white" />
+<img src="https://img.shields.io/badge/LLM_Output_Validation-7C3AED?style=for-the-badge" />
+<img src="https://img.shields.io/badge/Prompt_Injection_Defence-7C3AED?style=for-the-badge" />
+<img src="https://img.shields.io/badge/Structured_Output_Parsing-7C3AED?style=for-the-badge" />
 </p>
 
 **Databases**
@@ -367,6 +430,9 @@ Commissioned by a local online bakery business to build a React/TypeScript site 
 <img src="https://img.shields.io/badge/JWT_Auth-000000?style=for-the-badge&logo=jsonwebtokens&logoColor=white" />
 <img src="https://img.shields.io/badge/Cloudflare_Pages-F38020?style=for-the-badge&logo=cloudflare&logoColor=white" />
 <img src="https://img.shields.io/badge/Workers_AI-F38020?style=for-the-badge" />
+<img src="https://img.shields.io/badge/Neon-00E599?style=for-the-badge&logo=neon&logoColor=black" />
+<img src="https://img.shields.io/badge/Grafana-F46800?style=for-the-badge&logo=grafana&logoColor=white" />
+<img src="https://img.shields.io/badge/Groq-F55036?style=for-the-badge" />
 </p>
 
 **Tools**
@@ -379,6 +445,23 @@ Commissioned by a local online bakery business to build a React/TypeScript site 
 <img src="https://img.shields.io/badge/Jupyter-F37626?style=for-the-badge&logo=jupyter&logoColor=white" />
 <img src="https://img.shields.io/badge/Raspberry_Pi-A22846?style=for-the-badge&logo=raspberrypi&logoColor=white" />
 <img src="https://img.shields.io/badge/Kaggle-20BEFF?style=for-the-badge&logo=kaggle&logoColor=white" />
+<img src="https://img.shields.io/badge/PowerShell-5391FE?style=for-the-badge" />
+<img src="https://img.shields.io/badge/pytest-0A9EDC?style=for-the-badge&logo=pytest&logoColor=white" />
+<img src="https://img.shields.io/badge/Mermaid-FF3670?style=for-the-badge&logo=mermaid&logoColor=white" />
+</p>
+
+**Mobile & Device Modding**
+
+<p align="left">
+<img src="https://img.shields.io/badge/Custom_ROM_Flashing-3DDC84?style=for-the-badge&logo=android&logoColor=white" />
+<img src="https://img.shields.io/badge/iOS_Jailbreaking-000000?style=for-the-badge&logo=apple&logoColor=white" />
+<img src="https://img.shields.io/badge/TWRP-EC1C24?style=for-the-badge&logo=android&logoColor=white" />
+<img src="https://img.shields.io/badge/ADB-3DDC84?style=for-the-badge&logo=android&logoColor=white" />
+<img src="https://img.shields.io/badge/Fastboot-3DDC84?style=for-the-badge&logo=android&logoColor=white" />
+<img src="https://img.shields.io/badge/LineageOS-167C80?style=for-the-badge&logo=lineageos&logoColor=white" />
+<img src="https://img.shields.io/badge/EvolutionX-7C3AED?style=for-the-badge" />
+<img src="https://img.shields.io/badge/DerpFest-334155?style=for-the-badge" />
+<img src="https://img.shields.io/badge/XDA_Developers-EA7100?style=for-the-badge&logo=xdadevelopers&logoColor=white" />
 </p>
 
 **Engineering & Design**
