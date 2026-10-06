@@ -5,7 +5,7 @@
 </p>
 
 <p align="center">
-  <img src="https://readme-typing-svg.demolab.com?font=JetBrains+Mono&weight=500&size=21&pause=1200&color=22D3EE&center=true&vCenter=true&width=800&height=35&lines=Computer+Vision+%C2%B7+Backend+%C2%B7+Data+Analytics;Flutter+%2B+FastAPI%2C+shipped+end-to-end;Fresh+Comp+Eng+grad+%E2%80%94+open+to+work" alt="Typing headlines" />
+  <img src="https://readme-typing-svg.demolab.com?font=JetBrains+Mono&weight=500&size=21&pause=1200&color=22D3EE&center=true&vCenter=true&width=800&height=35&lines=Computer+Vision+%C2%B7+Backend+%C2%B7+Data+Analytics;Flutter+%2B+FastAPI%2C+shipped+end-to-end;Fresh+Comp+Eng+grad%2C+open+to+work" alt="Typing headlines" />
 </p>
 
 <p align="center">
@@ -27,22 +27,22 @@
 
 ## 🚀 About Me
 
-I recently graduated with a **B.S. in Computer Engineering** from the Technological University of the Philippines Visayas. I build AI systems, data tools, automation, and backend services — most of my projects start as a way to learn a new technology and end up as something people actually use.
+I recently graduated with a **B.S. in Computer Engineering** from the Technological University of the Philippines Visayas. I build AI systems, data tools, automation, and backend services. Most of my projects start as a way to learn a new technology and end up as something people actually use.
 
-> **9 shipped projects. 1 flagship RAG system with a measured retrieval eval harness. 1 provisioning orchestrator that rolls back its own failures. 1 defended thesis at >92% real-world accuracy. 13 certifications. All built and owned solo, end to end — from the database schema to what ships in production.**
+> **9 shipped projects. 1 flagship RAG system with a measured retrieval eval harness. 1 provisioning orchestrator that rolls back its own failures. 1 defended thesis at >96% real-world accuracy. 12 certifications. All built and owned solo, end to end, from the database schema to what ships in production.**
 
 <table>
 <tr>
 <td width="33%" valign="top">
 
 ### 🧠 AI that ships
-Every model I train or wire up sits inside a real workflow — license-plate reads, a chat assistant grounded in your own data, a retrieval system with measured accuracy instead of assumed accuracy. Never a bare demo.
+Every model I train or wire up sits inside a real workflow: license-plate reads, a chat assistant grounded in your own data, a retrieval system with measured accuracy instead of assumed accuracy. Never a bare demo.
 
 </td>
 <td width="33%" valign="top">
 
 ### ⚙️ Full stack, solo
-Frontend, backend, auth, CI/CD, deploy — I own the whole pipeline on every project, from Flutter release signing to a Raspberry Pi in production.
+Frontend, backend, auth, CI/CD, deploy. I own the whole pipeline on every project, from Flutter release signing to a Raspberry Pi in production.
 
 </td>
 <td width="33%" valign="top">
@@ -54,11 +54,11 @@ Dashboards, pipelines, and GIS layers that turn raw numbers into something a dec
 </tr>
 </table>
 
-- 🔭 &nbsp;Just shipped **JML Orchestrator** — an employee provisioning system in n8n and PostgreSQL that verifies every write by reading it back, and undoes its own half-finished work in reverse order when a step fails.<br>
-- 🦺 &nbsp;Also live: **a grounded RAG knowledge assistant over OSHA safety regulations** — measured retrieval, citation grounding, hallucination detection, and role-based access. [**Try it here**](https://rag-knowledge-assistant-z3hw.onrender.com/).<br>
-- 🌱 &nbsp;Currently learning **Spring Boot, Docker, data engineering, and cloud infrastructure**, plus building an end-to-end content automation pipeline.<br>
+- 🔭 &nbsp;Just shipped **JML Orchestrator**, an employee provisioning system in n8n and PostgreSQL that verifies every write by reading it back, and undoes its own half-finished work in reverse order when a step fails.<br>
+- 🦺 &nbsp;Also live: **a grounded RAG knowledge assistant over OSHA safety regulations**, with measured retrieval, citation grounding, hallucination detection, and role-based access. [**Try it here**](https://rag-knowledge-assistant-z3hw.onrender.com/).<br>
+- 🌱 &nbsp;Currently learning **Spring Boot and GoHighLevel**, plus building an end-to-end content automation pipeline.<br>
 - 👯 &nbsp;Looking to collaborate on **civic tech / open-source tools for local government**, and anything that puts computer vision or LLMs to practical use.<br>
-- 🤔 &nbsp;Drafting a plan to merge **Jarvis and Pace AI into one assistant** — computer vision for security and accessibility, wider voice commands, real voice recognition.<br>
+- 🤔 &nbsp;Drafting a plan to merge **Jarvis and Pace AI into one assistant**: computer vision for security and accessibility, wider voice commands, real voice recognition.<br>
 - 💬 &nbsp;Ask me about **computer vision with YOLO, RAG systems and how to actually measure them, or shipping Flutter + FastAPI end-to-end.**<br>
 - 😄 &nbsp;Pronouns: **he/him**<br>
 - ⚡ &nbsp;Fun fact: a customer once swore their phone **"just randomly died."** I opened it up and found a dead ant that had crawled in and shorted two contacts.<br>
@@ -69,17 +69,17 @@ Dashboards, pipelines, and GIS layers that turn raw numbers into something a dec
 ## 🧩 Featured Projects
 
 <details open>
-<summary><b>🦺 &nbsp;RAG Knowledge Assistant — grounded Q&A over OSHA safety regulations</b></summary>
+<summary><b>🦺 &nbsp;RAG Knowledge Assistant: grounded Q&A over OSHA safety regulations</b></summary>
 <br>
 
-A document Q&A system built like a product, not a tutorial. The differentiator is the layer most "RAG chatbot" portfolio projects skip entirely: a **measured retrieval eval harness**, citation grounding, and hallucination detection — not just a chatbot that sounds confident.
+A document Q&A system built like a product, not a tutorial. The differentiator is the layer most "RAG chatbot" portfolio projects skip entirely: a **measured retrieval eval harness**, citation grounding, and hallucination detection, not just a chatbot that sounds confident.
 
-- 📏 965 chunks over OSHA 29 CFR 1910, measured against a **45-question hand-verified eval set** — every citation machine-checked against the source text
+- 📏 965 chunks over OSHA 29 CFR 1910, measured against a **45-question hand-verified eval set**, with every citation machine-checked against the source text
 - ✅ **60 of 60 citations resolved to a real paragraph. Zero fabricated.** Gold-citation rate 37/38, ungrounded numbers 0, and 7/7 out-of-scope questions declined instead of guessed at
 - 🔍 The UI separates paragraphs the model **cited** from ones it retrieved-but-ignored, since the correct source is often sitting in that second list when the model misattributes a claim
-- 🗺️ A **corpus map** renders all 937 indexed paragraphs as cells and lights the ten a question retrieved — the search step made visible rather than asserted
+- 🗺️ A **corpus map** renders all 937 indexed paragraphs as cells and lights the ten a question retrieved, making the search step visible rather than asserted
 - 🔐 JWT auth with **role-based access control** enforced in the retrieval SQL, so a viewer is refused gated content even calling the API directly, not just in the UI
-- 📊 Measured on **two embedding backends** — local `nomic-embed-text` and hosted `bge-base-en-v1.5` — and the deltas are published rather than hidden
+- 📊 Measured on **two embedding backends**, local `nomic-embed-text` and hosted `bge-base-en-v1.5`, with the deltas published rather than hidden
 
 <p>
 <img src="https://img.shields.io/badge/Python-3776AB?style=flat-square&logo=python&logoColor=white" />
@@ -103,19 +103,19 @@ A document Q&A system built like a product, not a tutorial. The differentiator i
 </details>
 
 <details>
-<summary><b>🔁 &nbsp;JML Orchestrator — employee provisioning that undoes its own half-finished work</b></summary>
+<summary><b>🔁 &nbsp;JML Orchestrator: employee provisioning that undoes its own half-finished work</b></summary>
 <br>
 
-An employee onboarding/offboarding provisioning system built as **nine n8n workflows over PostgreSQL**. A request becomes an ordered plan derived from a policy table, privileged grants pause for human approval, and every step executes idempotently and is verified by reading the target system back. The hard part was never calling the APIs — it's that APIs fail halfway, and a half-provisioned account is worse than none because nobody knows it exists.
+An employee onboarding/offboarding provisioning system built as **nine n8n workflows over PostgreSQL**. A request becomes an ordered plan derived from a policy table, privileged grants pause for human approval, and every step executes idempotently and is verified by reading the target system back. The hard part was never calling the APIs. It's that APIs fail halfway, and a half-provisioned account is worse than none because nobody knows it exists.
 
 <img src="https://raw.githubusercontent.com/Yus3n10/Self-Healing-Employee-Lifecycle-Automation-n8n-workflow-/main/docs/assets/lifecycle-flow.svg" alt="Animated diagram of the three paths a provisioning request can take: a routine onboarding that completes unattended, a privileged onboarding that pauses for human approval, and a failing run that is compensated in reverse order." width="100%" />
 
-- 🔄 **Compensating-transaction saga** — a failed run walks its own ledger backwards and undoes what already succeeded, in reverse order. Verified by injecting a fault into the identity API, not by reading the code
-- 🔑 **Idempotency at two layers** — deterministic per-step `Idempotency-Key` headers plus a UNIQUE-constrained request ledger, making duplicate submissions *impossible* rather than unlikely
-- 🔬 **Read-back verification** — a 2xx is treated as a claim, not evidence. Every write is followed by a GET that asserts the intended effect. This caught a real case where the API reported success and nothing had changed
-- ⏸️ **Human-in-the-loop approval** that is single-use and expires in 24 hours, on a durable Wait node with the decision persisted to the database — nothing is provisioned while it waits
+- 🔄 **Compensating-transaction saga**: a failed run walks its own ledger backwards and undoes what already succeeded, in reverse order. Verified by injecting a fault into the identity API, not by reading the code
+- 🔑 **Idempotency at two layers**: deterministic per-step `Idempotency-Key` headers plus a UNIQUE-constrained request ledger, making duplicate submissions *impossible* rather than unlikely
+- 🔬 **Read-back verification**: a 2xx is treated as a claim, not evidence. Every write is followed by a GET that asserts the intended effect. This caught a real case where the API reported success and nothing had changed
+- ⏸️ **Human-in-the-loop approval** that is single-use and expires in 24 hours, on a durable Wait node with the decision persisted to the database. Nothing is provisioned while it waits
 - 🧨 **Verified by fault injection across eight failure scenarios**, including killing the provider *mid-rollback* to prove the system distinguishes `rolled_back` from `failed` and escalates only the second
-- 🤖 **One tightly fenced LLM** drafts requests from free-text HR email using an enum-constrained schema and evidence grounding — it produces a pre-filled form a human submits, and has no authority over anything that gets provisioned. Stripping its "quote the source" rule made it reject all seven extracted fields, which is the test most LLM-validation code never gets
+- 🤖 **One tightly fenced LLM** drafts requests from free-text HR email using an enum-constrained schema and evidence grounding. It produces a pre-filled form a human submits, and has no authority over anything that gets provisioned. Stripping its "quote the source" rule made it reject all seven extracted fields, which is the test most LLM-validation code never gets
 
 <p>
 <img src="https://img.shields.io/badge/n8n-EA4B71?style=flat-square&logo=n8n&logoColor=white" />
@@ -136,14 +136,14 @@ An employee onboarding/offboarding provisioning system built as **nine n8n workf
 </details>
 
 <details>
-<summary><b>🤖 &nbsp;Jarvis — a Raspberry Pi butler that talks first</b></summary>
+<summary><b>🤖 &nbsp;Jarvis: a Raspberry Pi butler that talks first</b></summary>
 <br>
 
-A voice-driven calendar assistant on a Raspberry Pi 5 that **announces upcoming appointments unprompted** and repeats until acknowledged — because a reactive assistant is useless when the failure mode is forgetting.
+A voice-driven calendar assistant on a Raspberry Pi 5 that **announces upcoming appointments unprompted** and repeats until acknowledged, because a reactive assistant is useless when the failure mode is forgetting.
 
 - 🎙️ Always-on **"Hey Jarvis"** wake word (openWakeWord) → **faster-whisper** STT → a pure, fully-tested intent parser
 - 🗣️ **Piper** TTS voice output, half-duplex echo gating so it doesn't hear itself talk
-- 💬 Optional conversational layer via **Gemini** — deterministic commands (acknowledge/snooze) always stay local; an LLM never decides anything that could mean a missed appointment
+- 💬 Optional conversational layer via **Gemini**. Deterministic commands (acknowledge/snooze) always stay local; an LLM never decides anything that could mean a missed appointment
 - ✅ Read-only Google Calendar OAuth, kept that way on purpose for an honest privacy story
 
 <p>
@@ -157,12 +157,12 @@ A voice-driven calendar assistant on a Raspberry Pi 5 that **announces upcoming 
 </details>
 
 <details>
-<summary><b>💬 &nbsp;Pace AI — a RAG chatbot that answers for me</b></summary>
+<summary><b>💬 &nbsp;Pace AI: a RAG chatbot that answers for me</b></summary>
 <br>
 
-A retrieval-augmented chatbot embedded in my portfolio that answers visitor questions about my work from a single curated document — and refuses rather than guesses when the document doesn't cover it. One invented credential on my own portfolio costs more than the feature is worth.
+A retrieval-augmented chatbot embedded in my portfolio that answers visitor questions about my work from a single curated document, and refuses rather than guesses when the document doesn't cover it. One invented credential on my own portfolio costs more than the feature is worth.
 
-- 🌐 Runs on **Cloudflare's edge** through a native Workers AI binding — no API key anywhere in the deployed code
+- 🌐 Runs on **Cloudflare's edge** through a native Workers AI binding, with no API key anywhere in the deployed code
 - 🧠 Embeddings via **bge-base-en-v1.5**, generation via **Llama 3.1 8B**, answers grounded only in retrieved context
 - ⚡ Frequent questions have pre-written answers that cost zero inference to serve
 - 🖥️ Also ships as a local app: Ollama + FastAPI + Chroma, hand-rolled retrieval loop, no LangChain
@@ -181,10 +181,10 @@ A retrieval-augmented chatbot embedded in my portfolio that answers visitor ques
 </details>
 
 <details>
-<summary><b>💰 &nbsp;Hamili — AI personal finance tracker</b></summary>
+<summary><b>💰 &nbsp;Hamili: AI personal finance tracker</b></summary>
 <br>
 
-A cross-platform finance app (Android + Web, single Flutter codebase) with a built-in assistant. People track spending, set budgets and savings goals, and ask a Gemini-powered chat about their own money in plain language — every answer grounded in real transactions, never generic advice.
+A cross-platform finance app (Android + Web, single Flutter codebase) with a built-in assistant. People track spending, set budgets and savings goals, and ask a Gemini-powered chat about their own money in plain language, with every answer grounded in real transactions, never generic advice.
 
 - Full stack shipped solo: **Flutter** frontend, **FastAPI** backend, **PostgreSQL** via SQLAlchemy, **JWT auth**
 - **GitHub Actions** pipeline builds, signs the Android release, and deploys to Firebase Hosting + Render
@@ -202,12 +202,12 @@ A cross-platform finance app (Android + Web, single Flutter codebase) with a bui
 </details>
 
 <details>
-<summary><b>🚓 &nbsp;SAVES AI — automatic license plate recognition (undergrad thesis)</b></summary>
+<summary><b>🚓 &nbsp;SAVES AI: automatic license plate recognition (undergrad thesis)</b></summary>
 <br>
 
 A YOLOv11 + OCR pipeline that reads license plates from a camera feed, validates them against a database, and keeps a searchable record. Presented to the **Land Transportation Office** for accuracy approval, and successfully defended as our undergraduate thesis with Engr. Al Christian L. Kardinas.
 
-- **>92%** plate-read accuracy (YOLOv11 + OCR) &nbsp;·&nbsp; **100%** database validation accuracy
+- **>96%** plate-read accuracy (YOLOv11 + OCR) &nbsp;·&nbsp; **100%** database validation accuracy
 
 <p>
 <img src="https://img.shields.io/badge/Python-3776AB?style=flat-square&logo=python&logoColor=white" />
@@ -226,10 +226,10 @@ A YOLOv11 + OCR pipeline that reads license plates from a camera feed, validates
 </details>
 
 <details>
-<summary><b>📊 &nbsp;Steam Player Engagement Analytics — data dashboard with AI-generated summaries</b></summary>
+<summary><b>📊 &nbsp;Steam Player Engagement Analytics: data dashboard with AI-generated summaries</b></summary>
 <br>
 
-Collects, cleans, and visualizes Steam game data in an interactive dashboard, then has the Gemini API write an executive summary of what the numbers say — instead of leaving a wall of charts for the reader to interpret.
+Collects, cleans, and visualizes Steam game data in an interactive dashboard, then has the Gemini API write an executive summary of what the numbers say, instead of leaving a wall of charts for the reader to interpret.
 
 <p>
 <img src="https://img.shields.io/badge/Python-3776AB?style=flat-square&logo=python&logoColor=white" />
@@ -245,12 +245,12 @@ Collects, cleans, and visualizes Steam game data in an interactive dashboard, th
 </details>
 
 <details>
-<summary><b>🎓 &nbsp;TUPVConnect — campus communication platform</b></summary>
+<summary><b>🎓 &nbsp;TUPVConnect: campus communication platform</b></summary>
 <br>
 
 Centralizes announcements, events, student organizations, academic resources, a marketplace, lost-and-found, and messaging for TUP Visayas in one place, with a different view and permission set for students, faculty, and administrators.
 
-- 🔌 Built against an **existing production MySQL backend I wasn't allowed to redesign** — the frontend types mirror the live schema and every data call routes through a single file, so going live is a one-file change
+- 🔌 Built against an **existing production MySQL backend I wasn't allowed to redesign**. The frontend types mirror the live schema and every data call routes through a single file, so going live is a one-file change
 - 🎨 The design system is drawn from the campus logo itself, down to the printed-circuit traces used as an ambient background
 
 <p>
@@ -269,14 +269,14 @@ Centralizes announcements, events, student organizations, academic resources, a 
 </details>
 
 <details>
-<summary><b>🐾 &nbsp;Pokémon Image Classifier — 1,009 classes, and the sense to say no</b></summary>
+<summary><b>🐾 &nbsp;Pokémon Image Classifier: 1,009 classes, and the sense to say no</b></summary>
 <br>
 
-A computer vision model that recognizes over 1,000 Pokémon species from an uploaded image, built to learn the full CV workflow rather than a ten-class tutorial version of it — and to know when an image isn't a Pokémon at all.
+A computer vision model that recognizes over 1,000 Pokémon species from an uploaded image, built to learn the full CV workflow rather than a ten-class tutorial version of it, and to know when an image isn't a Pokémon at all.
 
 - 🎯 **94.8%** top-1 accuracy, **97.3%** top-5, across 1,009 classes
 - 🚫 A dedicated rejection class catches non-Pokémon images with **97.6%** recall instead of confidently guessing
-- 🌐 Quantized to ~7 MB and runs **entirely client-side in the browser**, no server involved — try it live
+- 🌐 Quantized to ~7 MB and runs **entirely client-side in the browser**, no server involved. Try it live
 
 <p>
 <img src="https://img.shields.io/badge/Python-3776AB?style=flat-square&logo=python&logoColor=white" />
@@ -293,7 +293,7 @@ A computer vision model that recognizes over 1,000 Pokémon species from an uplo
 </details>
 
 <details>
-<summary><b>🥐 &nbsp;Creer — a small-batch home bakery's Instagram presence, rebuilt as a real website</b></summary>
+<summary><b>🥐 &nbsp;Creer: a small-batch home bakery's Instagram presence, rebuilt as a real website</b></summary>
 <br>
 
 Commissioned by a local online bakery business to build a React/TypeScript site with data-driven content layer so the owner can add menu items without touching code, custom crossfade photo galleries built from raw phone photos, and a resilience layer that keeps animations working even inside Instagram's in-app browser, where standard scroll-trigger APIs are known to silently fail.
@@ -306,6 +306,7 @@ Commissioned by a local online bakery business to build a React/TypeScript site 
 <img src="https://img.shields.io/badge/shadcn%2Fui-000000?style=flat-square" />
 </p>
 
+<a href="https://creerbcd.netlify.app"><img src="https://img.shields.io/badge/Live_Site-22D3EE?style=for-the-badge&logo=googlechrome&logoColor=black" /></a>
 <a href="https://github.com/Yus3n10/CreerWeb"><img src="https://img.shields.io/badge/View_Repo-181717?style=for-the-badge&logo=github&logoColor=white" /></a>
 </details>
 
@@ -319,7 +320,6 @@ Commissioned by a local online bakery business to build a React/TypeScript site 
 
 <p align="left">
 <img src="https://img.shields.io/badge/Python-3776AB?style=for-the-badge&logo=python&logoColor=white" />
-<img src="https://img.shields.io/badge/Java-ED8B00?style=for-the-badge&logo=openjdk&logoColor=white" />
 <img src="https://img.shields.io/badge/C-A8B9CC?style=for-the-badge&logo=c&logoColor=black" />
 <img src="https://img.shields.io/badge/C%2B%2B-00599C?style=for-the-badge&logo=cplusplus&logoColor=white" />
 <img src="https://img.shields.io/badge/JavaScript-F7DF1E?style=for-the-badge&logo=javascript&logoColor=black" />
@@ -367,6 +367,7 @@ Commissioned by a local online bakery business to build a React/TypeScript site 
 <img src="https://img.shields.io/badge/Audit_Logging-334155?style=for-the-badge" />
 <img src="https://img.shields.io/badge/Fault_Injection-F97583?style=for-the-badge&labelColor=334155" />
 <img src="https://img.shields.io/badge/SMTP-334155?style=for-the-badge" />
+<img src="https://img.shields.io/badge/OpenClaw-334155?style=for-the-badge" />
 </p>
 
 **AI & Data**
@@ -415,16 +416,15 @@ Commissioned by a local online bakery business to build a React/TypeScript site 
 <img src="https://img.shields.io/badge/MySQL-4479A1?style=for-the-badge&logo=mysql&logoColor=white" />
 <img src="https://img.shields.io/badge/Oracle-F80000?style=for-the-badge&logo=oracle&logoColor=white" />
 <img src="https://img.shields.io/badge/SQLite-003B57?style=for-the-badge&logo=sqlite&logoColor=white" />
+<img src="https://img.shields.io/badge/Supabase-3FCF8E?style=for-the-badge&logo=supabase&logoColor=white" />
 </p>
 
 **Cloud & DevOps**
 
 <p align="left">
-<img src="https://img.shields.io/badge/AWS-232F3E?style=for-the-badge&logo=amazonwebservices&logoColor=white" />
 <img src="https://img.shields.io/badge/Render-46E3B7?style=for-the-badge&logo=render&logoColor=black" />
 <img src="https://img.shields.io/badge/Firebase-FFCA28?style=for-the-badge&logo=firebase&logoColor=black" />
 <img src="https://img.shields.io/badge/GitHub_Actions-2088FF?style=for-the-badge&logo=githubactions&logoColor=white" />
-<img src="https://img.shields.io/badge/Docker_Desktop-2496ED?style=for-the-badge&logo=docker&logoColor=white" />
 <img src="https://img.shields.io/badge/CI%2FCD-22D3EE?style=for-the-badge" />
 <img src="https://img.shields.io/badge/REST_APIs-22D3EE?style=for-the-badge" />
 <img src="https://img.shields.io/badge/JWT_Auth-000000?style=for-the-badge&logo=jsonwebtokens&logoColor=white" />
@@ -448,6 +448,8 @@ Commissioned by a local online bakery business to build a React/TypeScript site 
 <img src="https://img.shields.io/badge/PowerShell-5391FE?style=for-the-badge" />
 <img src="https://img.shields.io/badge/pytest-0A9EDC?style=for-the-badge&logo=pytest&logoColor=white" />
 <img src="https://img.shields.io/badge/Mermaid-FF3670?style=for-the-badge&logo=mermaid&logoColor=white" />
+<img src="https://img.shields.io/badge/Google_Workspace-4285F4?style=for-the-badge&logo=google&logoColor=white" />
+<img src="https://img.shields.io/badge/Airtable-18BFFF?style=for-the-badge&logo=airtable&logoColor=white" />
 </p>
 
 **Mobile & Device Modding**
@@ -496,6 +498,19 @@ Commissioned by a local online bakery business to build a React/TypeScript site 
 <img src="https://img.shields.io/badge/ElevenLabs-000000?style=for-the-badge" />
 </p>
 
+**Familiar, Not Fluent** &nbsp;<sub>listed separately on purpose: real exposure, not production experience</sub>
+
+<p align="left">
+<img src="https://img.shields.io/badge/Java-334155?style=for-the-badge&logo=openjdk&logoColor=white&labelColor=0F172A" />
+<img src="https://img.shields.io/badge/Docker-334155?style=for-the-badge&logo=docker&logoColor=white&labelColor=0F172A" />
+<img src="https://img.shields.io/badge/AWS-334155?style=for-the-badge&logo=amazonwebservices&logoColor=white&labelColor=0F172A" />
+<img src="https://img.shields.io/badge/Microsoft_Azure-334155?style=for-the-badge&logoColor=white&labelColor=0F172A" />
+<img src="https://img.shields.io/badge/WordPress-334155?style=for-the-badge&logoColor=white&labelColor=0F172A&logo=wordpress" />
+<img src="https://img.shields.io/badge/Shopify-334155?style=for-the-badge&logoColor=white&labelColor=0F172A&logo=shopify" />
+<img src="https://img.shields.io/badge/Spring_Boot-334155?style=for-the-badge&logo=springboot&logoColor=white&labelColor=0F172A" />
+<img src="https://img.shields.io/badge/GoHighLevel-334155?style=for-the-badge&labelColor=0F172A" />
+</p>
+
 ---
 
 ## 💼 Experience
@@ -505,7 +520,7 @@ Commissioned by a local online bakery business to build a React/TypeScript site 
 <tr>
 <td valign="top"><b>Information Systems Intern</b></td>
 <td valign="top">Land Transportation Office</td>
-<td valign="top">Built a Python + Electron.js MIS that automated monthly revenue recording, replacing a manual process. Ran the technical side of daily operations — displays, files, seminar decks.</td>
+<td valign="top">Built and deployed a Python + Electron.js revenue-management system that the Registration Department adopted to log daily collections, replacing a manual monthly process. Also ran the technical side of daily operations: displays, files, seminar decks.</td>
 </tr>
 <tr>
 <td valign="top"><b>Computer Hardware Technician Intern</b></td>
@@ -513,9 +528,9 @@ Commissioned by a local online bakery business to build a React/TypeScript site 
 <td valign="top">Assembled and repaired desktop builds, diagnosed hardware/software issues, tracked inventory across branches, helped customers pick parts.</td>
 </tr>
 <tr>
-<td valign="top"><b>Assistant City Planner Intern</b></td>
+<td valign="top"><b>City Planner Intern</b></td>
 <td valign="top">City Government of Talisay</td>
-<td valign="top">Prepared and organized GIS datasets for city and landmark mapping projects — working across parcels, zoning, topography, land cover, imagery, and basemap layers.</td>
+<td valign="top">Prepared and organized GIS datasets for city and landmark mapping projects, working across parcels, zoning, topography, land cover, imagery, and basemap layers.</td>
 </tr>
 </table>
 
@@ -535,7 +550,7 @@ Commissioned by a local online bakery business to build a React/TypeScript site 
 <img src="https://img.shields.io/badge/IBM_%C2%B7_Coursera-Project_Manager_Professional-052FAD?style=for-the-badge&logo=ibm&logoColor=white" />
 <img src="https://img.shields.io/badge/IBM_%C2%B7_Coursera-RAG_and_Agentic_AI_Professional-052FAD?style=for-the-badge&logo=ibm&logoColor=white" />
 <img src="https://img.shields.io/badge/Google-UX_Design_Professional-4285F4?style=for-the-badge&logo=google&logoColor=white" />
-<img src="https://img.shields.io/badge/Google-Generative_AI_for_UI%2FUX_Design-4285F4?style=for-the-badge&logo=google&logoColor=white" />
+<img src="https://img.shields.io/badge/SkillUp_%C2%B7_Coursera-Generative_AI_for_UI%2FUX_Design-1E90FF?style=for-the-badge" />
 <img src="https://img.shields.io/badge/IBM_%C2%B7_Coursera-Full_Stack_Dev_(in_progress)-334155?style=for-the-badge&logo=ibm&logoColor=white" />
 </p>
 
@@ -568,7 +583,7 @@ Commissioned by a local online bakery business to build a React/TypeScript site 
 
 *"A man who hasn't hit his Claude limit by noon has wasted his morning."*
 
-**— Claudelius Maximus** <sub>(c. 2026)</sub>
+**Claudelius Maximus** <sub>(c. 2026)</sub>
 
 </td></tr>
 </table>
@@ -587,4 +602,4 @@ Commissioned by a local online bakery business to build a React/TypeScript site 
   <img src="https://capsule-render.vercel.app/api?type=waving&color=0:22D3EE,50:1E293B,100:0F172A&height=120&section=footer&animation=fadeIn" alt="footer" width="100%" />
 </p>
 
-<p align="center"><i>⭐️ From <a href="https://github.com/Yus3n10">Yus3n10</a> — software engineer building practical AI products.</i></p>
+<p align="center"><i>⭐️ From <a href="https://github.com/Yus3n10">Yus3n10</a>, software engineer building practical AI products.</i></p>
