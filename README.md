@@ -293,6 +293,37 @@ A computer vision model that recognizes over 1,000 Pokémon species from an uplo
 </details>
 
 <details>
+<summary><b>🧶 &nbsp;Craftbid: a commission marketplace for Filipino handmade crafts (client work, early phase)</b></summary>
+<br>
+
+Commissioned by a client who wanted one place where people could order handmade pieces from Filipino craft artists. A client posts what they want made with a starting budget in pesos, artists bid for it privately, and the one who gets picked follows the commission with the client until the piece is delivered.
+
+- 🤐 **Bidding is private.** An artist never sees another artist's price, reason, or conversation, and there are tests that fail if that ever changes
+- 💸 Craftbid never holds anyone's money. The client pays the artist directly and the site keeps the record of each payment with its receipt
+- 🧪 Tested against a **real Oracle database instead of mocks**, since most of the rules live in constraints
+- 📱 The biggest bug came from the client's own phone: Messenger on an iPhone kept signing her out, and Chromium-only tests never saw it
+
+<p>
+<img src="https://img.shields.io/badge/TypeScript-3178C6?style=flat-square&logo=typescript&logoColor=white" />
+<img src="https://img.shields.io/badge/Node.js-339933?style=flat-square&logo=nodedotjs&logoColor=white" />
+<img src="https://img.shields.io/badge/Fastify-000000?style=flat-square&logo=fastify&logoColor=white" />
+<img src="https://img.shields.io/badge/Zod-3E67B1?style=flat-square&logo=zod&logoColor=white" />
+<img src="https://img.shields.io/badge/Oracle-F80000?style=flat-square&logo=oracle&logoColor=white" />
+<img src="https://img.shields.io/badge/React_19-20232A?style=flat-square&logo=react&logoColor=61DAFB" />
+<img src="https://img.shields.io/badge/Tailwind_CSS-06B6D4?style=flat-square&logo=tailwindcss&logoColor=white" />
+<img src="https://img.shields.io/badge/Playwright-2EAD33?style=flat-square&logo=playwright&logoColor=white" />
+<img src="https://img.shields.io/badge/Cloudflare_Workers-F38020?style=flat-square&logo=cloudflare&logoColor=white" />
+<img src="https://img.shields.io/badge/Render-46E3B7?style=flat-square&logo=render&logoColor=black" />
+</p>
+
+<a href="https://craftbid-6w5p.onrender.com"><img src="https://img.shields.io/badge/Live_Site-22D3EE?style=for-the-badge&logo=googlechrome&logoColor=black" /></a>
+<a href="https://ptheusen-portfolio.pages.dev/projects/craftbid"><img src="https://img.shields.io/badge/Case_Study-181717?style=for-the-badge&logo=googlechrome&logoColor=white" /></a>
+<a href="https://github.com/Yus3n10/craftbid"><img src="https://img.shields.io/badge/View_Repo-181717?style=for-the-badge&logo=github&logoColor=white" /></a>
+
+<sub>Commissioned work, currently in its early phases and prone to changes.</sub>
+</details>
+
+<details>
 <summary><b>🥐 &nbsp;Creer: a small-batch home bakery's Instagram presence, rebuilt as a real website</b></summary>
 <br>
 
